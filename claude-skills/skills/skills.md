@@ -1,0 +1,224 @@
+# UX & Mendix Development Skills
+
+This document provides an overview of specialized AI skills tailored for UX/Mendix development work. Each skill represents a focused expertise area to help with specific aspects of design and development.
+
+## Available Skills
+
+### 1. UX Designer
+**Location**: `claude-skills/skills/ux-designer/skill.md`
+
+**Focus**: User-centered design, Figma mastery, design thinking
+
+**When to Use**:
+- Designing user interfaces and experiences
+- Creating Figma components and design systems
+- Building wireframes and prototypes
+- Establishing visual design patterns
+- Conducting design critiques
+- Setting up design file organization
+- Creating interactive prototypes
+- Optimizing designs for development handoff
+
+**Key Strengths**:
+- Advanced Figma proficiency (components, auto-layout, variants, prototyping)
+- Design-to-code workflows
+- Accessibility-first design (WCAG 2.1 AA)
+- Responsive and mobile-first design
+- Design system architecture
+- Visual design (typography, color, layout)
+
+---
+
+### 2. Mendix Developer
+**Location**: `claude-skills/skills/mendix-developer/skill.md`
+
+**Focus**: Mendix low-code development, custom theming, Atlas UI
+
+**When to Use**:
+- Building Mendix applications
+- Customizing Atlas UI themes
+- Creating custom design properties
+- Implementing modular design systems in Mendix
+- Writing SASS/CSS for Mendix apps
+- Converting Figma designs to Mendix layouts
+- Optimizing Mendix app styling and performance
+- Creating reusable page templates
+
+**Key Strengths**:
+- Mendix Studio Pro expertise
+- Atlas UI framework customization
+- SASS/CSS in Mendix context
+- Design system integration (Mendix 9.6+)
+- Performance optimization
+- Cross-platform design implementation
+- Custom widget styling
+
+---
+
+### 3. UX Researcher
+**Location**: `claude-skills/skills/ux-researcher/skill.md`
+
+**Focus**: User research, customer personas, data-driven insights
+
+**When to Use**:
+- Developing customer personas (3-4 research-backed personas)
+- Planning and conducting user interviews
+- Creating user journey maps
+- Analyzing qualitative and quantitative research data
+- Designing surveys and usability tests
+- Synthesizing research findings into actionable insights
+- Presenting research to stakeholders
+- Validating design decisions with data
+
+**Key Strengths**:
+- Research-backed persona development (demographics, goals, pain points, behaviors)
+- AI-augmented research methodologies
+- User interview planning and execution
+- Journey mapping and empathy mapping
+- Usability testing (moderated and unmoderated)
+- Research synthesis and presentation
+- WCAG accessibility research
+
+---
+
+### 4. Design System Specialist
+**Location**: `claude-skills/skills/design-system-specialist/skill.md`
+
+**Focus**: HTML & CSS component libraries, design tokens, no frameworks
+
+**When to Use**:
+- Creating design token systems with CSS Variables
+- Building accessible, responsive component libraries
+- Converting Figma designs to HTML/CSS
+- Implementing multi-theme systems (light/dark mode)
+- Establishing CSS architecture (BEM, CUBE CSS, OOCSS)
+- Building fluid, responsive layouts (Grid, Flexbox)
+- Optimizing CSS for performance
+- Creating typography and color systems
+
+**Key Strengths**:
+- Pure HTML/CSS solutions (no JavaScript frameworks)
+- Modern CSS features (Grid, Flexbox, Custom Properties, Container Queries)
+- Design token architecture
+- WCAG 2.1 AA accessibility compliance
+- Component documentation and style guides
+- Mobile-first, responsive design
+- CSS performance optimization
+
+---
+
+### 5. Pure JavaScript Developer
+**Location**: `claude-skills/skills/javascript-developer/skill.md`
+
+**Focus**: Vanilla JavaScript, DOM manipulation, browser APIs (no frameworks)
+
+**When to Use**:
+- Creating interactive UI components without frameworks
+- DOM manipulation and event handling
+- Working with browser APIs (Fetch, Storage, Intersection Observer)
+- Form validation and submission
+- Client-side routing with History API
+- Building custom dropdowns, modals, accordions, etc.
+- Implementing lazy loading and infinite scroll
+- State management without frameworks
+
+**Key Strengths**:
+- Modern ES6+ JavaScript
+- Vanilla JS (no jQuery, React, Vue, Angular, etc.)
+- Browser API expertise (Fetch, Web Storage, Observers)
+- Event delegation and efficient DOM manipulation
+- Progressive enhancement approach
+- Accessibility-focused JavaScript
+- Clean, framework-free code
+
+---
+
+## Skill Selection Guide
+
+### For Design Work
+- **UI/UX Design** → Use **UX Designer** skill
+- **User Research & Personas** → Use **UX Researcher** skill
+- **Figma to Code** → Use **UX Designer** or **Design System Specialist**
+
+### For Mendix Development
+- **Mendix Apps** → Use **Mendix Developer** skill
+- **Mendix Theming** → Use **Mendix Developer** skill
+- **Mendix + Figma** → Combine **UX Designer** and **Mendix Developer**
+
+### For Front-End Development
+- **HTML/CSS Components** → Use **Design System Specialist** skill
+- **JavaScript Interactivity** → Use **Pure JavaScript Developer** skill
+- **Design Systems** → Use **Design System Specialist** skill
+- **Full Component (HTML/CSS/JS)** → Combine **Design System Specialist** and **JavaScript Developer**
+
+### For Research & Strategy
+- **Customer Personas** → Use **UX Researcher** skill
+- **User Interviews** → Use **UX Researcher** skill
+- **Journey Mapping** → Use **UX Researcher** or **UX Designer**
+
+---
+
+## Technology Stack
+
+These skills are optimized for the following stack:
+
+- **Design**: Figma
+- **Development Platform**: Mendix (low-code)
+- **Styling**: HTML, CSS, SASS/SCSS
+- **Scripting**: Vanilla JavaScript (ES6+)
+- **Design Systems**: CSS Variables, BEM, component architecture
+- **Accessibility**: WCAG 2.1 AA compliance
+
+---
+
+## Workflow Integration
+
+### Typical Design to Development Flow
+
+1. **Research Phase** → **UX Researcher** skill
+   - Develop personas
+   - Conduct user interviews
+   - Create journey maps
+
+2. **Design Phase** → **UX Designer** skill
+   - Create Figma designs
+   - Build component library
+   - Design prototypes
+
+3. **Development Phase** → Multiple skills
+   - **Mendix Developer**: Build Mendix app structure
+   - **Design System Specialist**: Create HTML/CSS components
+   - **JavaScript Developer**: Add interactivity
+
+4. **Integration Phase** → **Mendix Developer**
+   - Integrate design system into Mendix
+   - Customize Atlas UI theme
+   - Implement responsive behavior
+
+---
+
+## Notes
+
+- All skills emphasize **accessibility** (WCAG 2.1 AA)
+- All skills follow **modern best practices** (2024)
+- Skills avoid frameworks and focus on **web standards**
+- Skills prioritize **maintainability** and **performance**
+- Skills include **documentation** and code examples
+
+---
+
+## Getting Started
+
+To use a skill, simply reference it when asking for help:
+
+**Examples**:
+- "Using the UX Researcher skill, help me create 3 customer personas for a travel booking app"
+- "As a Mendix Developer, help me customize the Atlas UI theme with our brand colors"
+- "Using the Design System Specialist skill, create a button component with CSS variables"
+- "As a Pure JavaScript Developer, create an accordion component without using any frameworks"
+- "Using the UX Designer skill, help me organize my Figma file structure for a design system"
+
+---
+
+**Last Updated**: November 2024
+**Skills Version**: 1.0
