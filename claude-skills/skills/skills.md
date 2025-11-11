@@ -107,29 +107,30 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 
 ---
 
-### 5. Pure JavaScript Developer
+### 5. Mendix JavaScript Developer
 **Location**: `claude-skills/skills/javascript-developer/skill.md`
 
-**Focus**: Vanilla JavaScript, DOM manipulation, browser APIs (no frameworks)
+**Focus**: JavaScript Actions for Nanoflows, Mendix Client API, client-side logic
 
 **When to Use**:
-- Creating interactive UI components without frameworks
-- DOM manipulation and event handling
-- Working with browser APIs (Fetch, Storage, Intersection Observer)
-- Form validation and submission
-- Client-side routing with History API
-- Building custom dropdowns, modals, accordions, etc.
-- Implementing lazy loading and infinite scroll
-- State management without frameworks
+- Creating JavaScript Actions for Nanoflows
+- Working with Mendix Client API (mx.data, mx.ui, mx.session)
+- Complex client-side calculations and validations
+- Browser API integration (geolocation, localStorage, camera)
+- Third-party integrations (payment gateways, maps, analytics)
+- Offline-first logic for mobile apps
+- Custom business logic that Nanoflows can't handle
+- Real-time client-side validation
 
 **Key Strengths**:
-- Modern ES6+ JavaScript
-- Vanilla JS (no jQuery, React, Vue, Angular, etc.)
-- Browser API expertise (Fetch, Web Storage, Observers)
-- Event delegation and efficient DOM manipulation
-- Progressive enhancement approach
-- Accessibility-focused JavaScript
-- Clean, framework-free code
+- Mendix Client API expertise (mx.*)
+- JavaScript Actions with proper error handling
+- Nanoflow integration patterns
+- Vanilla ES6+ JavaScript (no external libraries)
+- Working with MxObjects and entity data
+- Promise-based async patterns for Mendix callbacks
+- Offline mobile app support
+- JSDoc documentation for Studio Pro
 
 ---
 
@@ -147,9 +148,10 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 
 ### For Front-End Development
 - **HTML/CSS Components** → Use **Design System Specialist** skill
-- **JavaScript Interactivity** → Use **Pure JavaScript Developer** skill
+- **Mendix JavaScript Actions** → Use **Mendix JavaScript Developer** skill
 - **Design Systems** → Use **Design System Specialist** skill
-- **Full Component (HTML/CSS/JS)** → Combine **Design System Specialist** and **JavaScript Developer**
+- **Nanoflows + JavaScript** → Use **Mendix JavaScript Developer** skill
+- **Custom Widgets** → Combine **Design System Specialist** and **Mendix JavaScript Developer**
 
 ### For Research & Strategy
 - **Customer Personas** → Use **UX Researcher** skill
@@ -165,7 +167,9 @@ These skills are optimized for the following stack:
 - **Design**: Figma
 - **Development Platform**: Mendix (low-code)
 - **Styling**: HTML, CSS, SASS/SCSS
-- **Scripting**: Vanilla JavaScript (ES6+)
+- **Client-Side Logic**: Nanoflows + JavaScript Actions
+- **Mendix API**: mx.data, mx.ui, mx.session, mx.parser
+- **Scripting**: Vanilla JavaScript (ES6+, no external libraries)
 - **Design Systems**: CSS Variables, BEM, component architecture
 - **Accessibility**: WCAG 2.1 AA compliance
 
@@ -186,9 +190,9 @@ These skills are optimized for the following stack:
    - Design prototypes
 
 3. **Development Phase** → Multiple skills
-   - **Mendix Developer**: Build Mendix app structure
+   - **Mendix Developer**: Build Mendix app structure and theming
    - **Design System Specialist**: Create HTML/CSS components
-   - **JavaScript Developer**: Add interactivity
+   - **Mendix JavaScript Developer**: Create JavaScript Actions for Nanoflows
 
 4. **Integration Phase** → **Mendix Developer**
    - Integrate design system into Mendix
@@ -215,8 +219,9 @@ To use a skill, simply reference it when asking for help:
 - "Using the UX Researcher skill, help me create 3 customer personas for a travel booking app"
 - "As a Mendix Developer, help me customize the Atlas UI theme with our brand colors"
 - "Using the Design System Specialist skill, create a button component with CSS variables"
-- "As a Pure JavaScript Developer, create an accordion component without using any frameworks"
+- "As a Mendix JavaScript Developer, create a JavaScript Action to validate email addresses for Nanoflows"
 - "Using the UX Designer skill, help me organize my Figma file structure for a design system"
+- "As a Mendix JavaScript Developer, create a JavaScript Action that retrieves geolocation and updates a Mendix object"
 
 ---
 
