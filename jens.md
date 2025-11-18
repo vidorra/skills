@@ -4,7 +4,7 @@ This document provides an overview of the specialized AI skills created for UX/M
 
 ## What Was Created
 
-A comprehensive set of 7 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer and ZZP'er, along with a quick reference guide.
+A comprehensive set of 8 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer and ZZP'er, along with a quick reference guide. Includes personalized Dutch and English business writing skills using your authentic communication style.
 
 ### Files Created
 
@@ -23,11 +23,13 @@ claude-skills/skills/
 ├── automation-tester/
 │   └── skill.md                    # Automation Tester skill
 ├── dutch-business-writer/
-│   └── skill.md                    # Dutch Business Text Writer skill
+│   └── skill.md                    # Dutch Business Text Writer skill (Jens's style)
+├── english-business-writer/
+│   └── skill.md                    # English Business Text Writer skill (Jens's style)
 └── skills.md                       # Quick reference overview
 ```
 
-## The 7 Skills
+## The 8 Skills
 
 ### 1. UX Designer (`claude-skills/skills/ux-designer/skill.md`)
 
@@ -254,10 +256,58 @@ This skill includes the complete Claude approach to building customer personas:
 
 ---
 
+### 8. English Business Text Writer (`claude-skills/skills/english-business-writer/skill.md`)
+
+**Purpose**: Expert in professional English business correspondence using Jens's personal style
+
+**Core Capabilities**:
+- Professionally casual English business writing
+- Freelancer/consultant-specific correspondence
+- Proposals, invoices, and client emails
+- Payment reminders and collection communication
+- Business announcements and networking
+- Professional boundary-setting language
+- Complaint handling and customer service
+- Natural, conversational English tone
+- Strategic hedging and solution-oriented approach
+
+**When to Use**:
+- Writing proposals and quotes
+- Creating invoice correspondence
+- Drafting payment reminders (friendly to assertive)
+- Professional client emails
+- Contracts and agreements
+- First contact with potential clients
+- Setting professional boundaries
+- Announcing business updates (rates, vacation)
+- Handling complaints and difficult situations
+- Any English business text needs
+
+**Key Templates Included**:
+- **Proposals**: Standard and informal versions
+- **Invoices**: Professional invoice emails
+- **Payment Reminders**: Three-tier approach (friendly → assertive → final)
+- **Client Acquisition**: Cold outreach and networking follow-ups
+- **Service Offers**: New service announcements
+- **Boundary Setting**: Scope creep and additional work communication
+- **Business Updates**: Rate changes, vacation notices
+- **Declinations**: Professional ways to decline work
+
+**Voice Characteristics**:
+- "Hi [name]," openings (never "Dear")
+- "Cheers," or "Thanks," closings
+- Characteristic phrases: "Let me know", "The idea is to", "I ran into"
+- Avoids corporate jargon completely ("leverage", "synergy")
+- Strategic hedging: "probably", "likely", "as far as I know"
+- Solution-oriented communication
+- Natural imperfections make it feel human
+
+---
+
 ## Quick Reference Guide (`claude-skills/skills/skills.md`)
 
 A comprehensive overview document that includes:
-- Descriptions of all 7 skills
+- Descriptions of all 8 skills
 - When to use each skill
 - Skill selection guide (by task type)
 - Technology stack overview
@@ -318,6 +368,16 @@ Using the Dutch Business Text Writer skill, create a friendly payment
 reminder for an invoice that's 10 days overdue
 ```
 
+```
+As an English Business Text Writer, help me write a proposal for
+UX consulting services for a new client
+```
+
+```
+Using the English Business Text Writer skill, create a second payment
+reminder for a client who's 30 days overdue
+```
+
 ### Combining Skills
 
 You can combine multiple skills for complex workflows:
@@ -369,6 +429,15 @@ Atlas UI.
 - Professional Networking → **Dutch Business Text Writer**
 - Setting Boundaries → **Dutch Business Text Writer**
 - Any Dutch Business Text → **Dutch Business Text Writer**
+
+**Business Communication (English/Freelance)**:
+- Proposals & Quotes → **English Business Text Writer**
+- Invoices & Payment Reminders → **English Business Text Writer**
+- Client Emails → **English Business Text Writer**
+- Contracts & Agreements → **English Business Text Writer**
+- Professional Networking → **English Business Text Writer**
+- Setting Boundaries → **English Business Text Writer**
+- Any English Business Text → **English Business Text Writer**
 
 ## Your Technology Stack
 

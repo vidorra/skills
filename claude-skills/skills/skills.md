@@ -165,7 +165,7 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 ### 7. Dutch Business Text Writer
 **Location**: `claude-skills/skills/dutch-business-writer/skill.md`
 
-**Focus**: Professional Dutch business correspondence for ZZP'ers and small businesses
+**Focus**: Professional Dutch business correspondence for ZZP'ers using Jens's personal style
 
 **When to Use**:
 - Writing quotes and proposals (offertes)
@@ -180,15 +180,43 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 - All Dutch business communication
 
 **Key Strengths**:
-- Native Dutch business writing expertise
-- ZZP-specific correspondence (quotes, invoices, reminders)
-- Cultural awareness of Dutch business etiquette
-- Formal, semi-formal, and informal tone mastery
-- Clear pricing and payment communication
-- Professional boundary-setting language
-- Legal compliance (AVG/GDPR, invoicing requirements)
-- Ready-to-use templates for common scenarios
-- Both direct and diplomatic phrasing options
+- Jens's authentic Dutch voice (professionally casual)
+- Characteristic phrases ("Laat maar weten", "Voor de zekerheid")
+- "Hi [naam]," openings instead of formal greetings
+- Natural, conversational tone with strategic hedging
+- ZZP-specific correspondence templates
+- Dutch business culture awareness
+- Legal compliance (AVG/GDPR, invoicing)
+- Quality checks to ensure authentic voice
+
+---
+
+### 8. English Business Text Writer
+**Location**: `claude-skills/skills/english-business-writer/skill.md`
+
+**Focus**: Professional English business correspondence using Jens's personal style
+
+**When to Use**:
+- Writing proposals and quotes
+- Creating invoice correspondence
+- Drafting contracts and agreements
+- Professional client emails
+- Payment reminders and collection
+- Business announcements and updates
+- Client acquisition and networking
+- Setting professional boundaries
+- Complaint handling and customer service
+- All English business communication
+
+**Key Strengths**:
+- Jens's authentic English voice (professionally casual)
+- Characteristic phrases ("Let me know", "The idea is to")
+- "Hi [name]," openings, "Cheers," closings
+- Natural, conversational tone with strategic hedging
+- Freelancer/consultant-specific templates
+- Avoids corporate jargon completely
+- Solution-oriented communication
+- Quality checks to ensure authentic voice
 
 ---
 
@@ -225,7 +253,8 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 - **Mendix App Testing** → Use **Automation Tester** skill
 - **Visual Regression Testing** → Use **Automation Tester** skill
 
-### For Business Communication (ZZP/Dutch)
+### For Business Communication
+**Dutch (ZZP)**:
 - **Quotes & Proposals** → Use **Dutch Business Text Writer** skill
 - **Invoices & Payment Reminders** → Use **Dutch Business Text Writer** skill
 - **Client Emails** → Use **Dutch Business Text Writer** skill
@@ -233,6 +262,15 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 - **Professional Networking** → Use **Dutch Business Text Writer** skill
 - **Setting Boundaries** → Use **Dutch Business Text Writer** skill
 - **Any Dutch Business Text** → Use **Dutch Business Text Writer** skill
+
+**English (Freelance/Consulting)**:
+- **Proposals & Quotes** → Use **English Business Text Writer** skill
+- **Invoices & Payment Reminders** → Use **English Business Text Writer** skill
+- **Client Emails** → Use **English Business Text Writer** skill
+- **Contracts & Agreements** → Use **English Business Text Writer** skill
+- **Professional Networking** → Use **English Business Text Writer** skill
+- **Setting Boundaries** → Use **English Business Text Writer** skill
+- **Any English Business Text** → Use **English Business Text Writer** skill
 
 ---
 
@@ -305,9 +343,10 @@ To use a skill, simply reference it when asking for help:
 - "As a Mendix JavaScript Developer, create a JavaScript Action to validate email addresses for Nanoflows"
 - "Using the UX Designer skill, help me organize my Figma file structure for a design system"
 - "As an Automation Tester, create a test plan for accessibility testing our Mendix application using free tools"
-- "Using the Automation Tester skill, help me test cross-browser compatibility with BrowserStack free tier"
-- "As a Dutch Business Text Writer, help me write a professional quote for a new client"
-- "Using the Dutch Business Text Writer skill, create a payment reminder for an overdue invoice"
+- "As a Dutch Business Text Writer, help me write a professional quote for a new web design project"
+- "Using the Dutch Business Text Writer skill, create a friendly payment reminder for an invoice that's 10 days overdue"
+- "As an English Business Text Writer, help me write a proposal for consulting services"
+- "Using the English Business Text Writer skill, create a second payment reminder for a client"
 
 ---
 
