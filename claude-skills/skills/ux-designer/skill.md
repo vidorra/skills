@@ -66,3 +66,63 @@ When working on UX design tasks:
 - Optimizing designs for development handoff
 - Conducting design critiques and providing feedback
 - Setting up design file organization and naming conventions
+
+---
+
+## Skill Feedback Log
+
+This section tracks feedback from agents using this skill to enable continuous improvement.
+
+### How to Submit Feedback
+
+When you encounter issues, find missing documentation, or discover improvements, add an entry below using this template:
+
+```yaml
+---
+date: YYYY-MM-DD
+agent: [agent identifier or "human"]
+type: [bug|documentation|enhancement|success|question]
+priority: [high|medium|low]
+status: [open|in-progress|resolved|wontfix]
+description: |
+  Clear description of the issue, gap, or suggestion.
+  Be specific about what didn't work or what's missing.
+context: |
+  What were you trying to accomplish?
+  What did you expect vs what happened?
+resolution: |
+  [Leave empty initially, fill when resolved]
+  How was this addressed?
+---
+```
+
+### Feedback Entries
+
+```yaml
+---
+date: 2024-11-18
+agent: skill-creator
+type: enhancement
+priority: low
+status: open
+description: |
+  Consider adding examples of Figma plugin recommendations for
+  specific workflows (e.g., accessibility checkers, design token exporters)
+context: |
+  Agents may benefit from knowing which Figma plugins enhance
+  the workflows described in this skill.
+resolution: |
+  [Pending]
+---
+```
+
+<!-- Add new feedback entries above this line -->
+
+### Feedback Statistics
+
+- Total entries: 1
+- Open: 1
+- Resolved: 0
+- Enhancement requests: 1
+- Bugs reported: 0
+- Documentation gaps: 0

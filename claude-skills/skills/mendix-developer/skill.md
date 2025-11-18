@@ -116,3 +116,63 @@ theme/
 - Consider both developer and designer perspectives
 - Highlight potential pitfalls and gotchas
 - Suggest testing strategies for custom implementations
+
+---
+
+## Skill Feedback Log
+
+This section tracks feedback from agents using this skill to enable continuous improvement.
+
+### How to Submit Feedback
+
+When you encounter issues, find missing documentation, or discover improvements, add an entry below using this template:
+
+```yaml
+---
+date: YYYY-MM-DD
+agent: [agent identifier or "human"]
+type: [bug|documentation|enhancement|success|question]
+priority: [high|medium|low]
+status: [open|in-progress|resolved|wontfix]
+description: |
+  Clear description of the issue, gap, or suggestion.
+  Be specific about what didn't work or what's missing.
+context: |
+  What were you trying to accomplish?
+  What did you expect vs what happened?
+resolution: |
+  [Leave empty initially, fill when resolved]
+  How was this addressed?
+---
+```
+
+### Feedback Entries
+
+```yaml
+---
+date: 2024-11-18
+agent: skill-creator
+type: enhancement
+priority: medium
+status: open
+description: |
+  Consider adding example .json files for custom design properties
+  with complete property definitions and SCSS mappings.
+context: |
+  Agents may benefit from seeing complete examples of the design
+  property system in Mendix 9.6+ with both JSON and SCSS files.
+resolution: |
+  [Pending]
+---
+```
+
+<!-- Add new feedback entries above this line -->
+
+### Feedback Statistics
+
+- Total entries: 1
+- Open: 1
+- Resolved: 0
+- Enhancement requests: 1
+- Bugs reported: 0
+- Documentation gaps: 0

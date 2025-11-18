@@ -339,9 +339,75 @@ Each skill file contains:
 - Common use cases
 - Output style guidelines
 - Integration notes
+- **Feedback log** for continuous improvement
+
+---
+
+## Feedback System
+
+Each skill includes a built-in feedback mechanism to enable continuous improvement.
+
+### How It Works
+
+At the end of each skill file, there's a **Skill Feedback Log** section where agents (or humans) can report:
+
+- **Bugs**: Issues with skill instructions or incorrect guidance
+- **Documentation Gaps**: Missing examples, unclear explanations
+- **Enhancements**: Suggestions for improvement
+- **Success Stories**: What worked well
+- **Questions**: Areas needing clarification
+
+### Feedback Template
+
+```yaml
+---
+date: YYYY-MM-DD
+agent: [agent identifier or "human"]
+type: [bug|documentation|enhancement|success|question]
+priority: [high|medium|low]
+status: [open|in-progress|resolved|wontfix]
+description: |
+  Clear description of the issue, gap, or suggestion.
+  Be specific about what didn't work or what's missing.
+context: |
+  What were you trying to accomplish?
+  What did you expect vs what happened?
+resolution: |
+  [Leave empty initially, fill when resolved]
+  How was this addressed?
+---
+```
+
+### Why This Matters
+
+**All in One Package**: Feedback is stored directly with the skill, not in a separate system. This keeps everything together and makes it easy to review and iterate.
+
+**Agent-Friendly**: Different agents may interpret instructions differently. By logging their experiences, you can identify patterns and improve clarity.
+
+**Continuous Improvement**: As you use these skills, you'll discover gaps, edge cases, and opportunities for enhancement. The feedback log captures this knowledge.
+
+**Version History**: The git commits combined with feedback entries create a complete history of how each skill evolved.
+
+### Using Feedback to Improve Skills
+
+1. **Review Regularly**: Check feedback logs periodically
+2. **Identify Patterns**: Multiple agents reporting similar issues indicates priority
+3. **Update Skills**: Address feedback by improving documentation or examples
+4. **Mark as Resolved**: Update feedback entries with resolution details
+5. **Track Metrics**: Feedback statistics show overall skill health
+
+### Current Feedback Status
+
+Each skill has started with sample feedback entries:
+
+- **UX Designer**: Enhancement request for Figma plugin recommendations
+- **UX Researcher**: Success story about Claude persona methodology integration
+- **Mendix Developer**: Enhancement request for design property examples
+- **Design System Specialist**: Enhancement request for modern CSS examples
+- **Mendix JavaScript Developer**: Success story about Nanoflow refocus
 
 ---
 
 **Created**: November 11, 2024
 **Skills Version**: 1.0
-**Last Updated**: November 11, 2024
+**Last Updated**: November 18, 2024

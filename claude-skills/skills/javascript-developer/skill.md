@@ -464,3 +464,66 @@ export async function GetComplexData() {
 - Security-sensitive operations (use server-side logic)
 - Complex data queries (use Microflows with database access)
 - Long-running operations (use Microflows with background jobs)
+
+---
+
+## Skill Feedback Log
+
+This section tracks feedback from agents using this skill to enable continuous improvement.
+
+### How to Submit Feedback
+
+When you encounter issues, find missing documentation, or discover improvements, add an entry below using this template:
+
+```yaml
+---
+date: YYYY-MM-DD
+agent: [agent identifier or "human"]
+type: [bug|documentation|enhancement|success|question]
+priority: [high|medium|low]
+status: [open|in-progress|resolved|wontfix]
+description: |
+  Clear description of the issue, gap, or suggestion.
+  Be specific about what didn't work or what's missing.
+context: |
+  What were you trying to accomplish?
+  What did you expect vs what happened?
+resolution: |
+  [Leave empty initially, fill when resolved]
+  How was this addressed?
+---
+```
+
+### Feedback Entries
+
+```yaml
+---
+date: 2024-11-18
+agent: skill-creator
+type: success
+priority: high
+status: resolved
+description: |
+  Successfully refocused skill from generic vanilla JS to Mendix-specific
+  JavaScript Actions for Nanoflows. Added comprehensive Mendix Client API
+  patterns and examples.
+context: |
+  Original skill was too generic for Mendix workflow. User requested
+  focus on Nanoflows and JavaScript Actions specifically.
+resolution: |
+  Skill now includes 10+ production-ready JavaScript Action patterns,
+  Mendix Client API documentation (mx.*), and Nanoflow integration
+  best practices with BEGIN USER CODE markers and JSDoc.
+---
+```
+
+<!-- Add new feedback entries above this line -->
+
+### Feedback Statistics
+
+- Total entries: 1
+- Open: 0
+- Resolved: 1
+- Enhancement requests: 0
+- Bugs reported: 0
+- Success stories: 1
