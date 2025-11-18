@@ -4,7 +4,7 @@ This document provides an overview of the specialized AI skills created for UX/M
 
 ## What Was Created
 
-A comprehensive set of 5 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer, along with a quick reference guide.
+A comprehensive set of 6 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer, along with a quick reference guide.
 
 ### Files Created
 
@@ -20,10 +20,12 @@ claude-skills/skills/
 │   └── skill.md                    # Design System Specialist skill
 ├── javascript-developer/
 │   └── skill.md                    # Mendix JavaScript Developer skill
+├── automation-tester/
+│   └── skill.md                    # Automation Tester skill
 └── skills.md                       # Quick reference overview
 ```
 
-## The 5 Skills
+## The 6 Skills
 
 ### 1. UX Designer (`claude-skills/skills/ux-designer/skill.md`)
 
@@ -165,10 +167,48 @@ This skill includes the complete Claude approach to building customer personas:
 
 ---
 
+### 6. Automation Tester (`claude-skills/skills/automation-tester/skill.md`)
+
+**Purpose**: Expert in testing online tools and websites using free, web-based testing software
+
+**Core Capabilities**:
+- Accessibility testing (WCAG 2.1 AA compliance)
+- Performance testing (Lighthouse, WebPageTest, GTmetrix)
+- Cross-browser compatibility testing (BrowserStack, LambdaTest free tiers)
+- Functional testing with browser automation (Selenium IDE, Katalon Recorder)
+- API testing (Postman, Hoppscotch)
+- Visual regression testing (Percy, BackstopJS)
+- Mobile responsive testing
+- Mendix application testing
+- Bug reporting and test documentation
+
+**When to Use**:
+- Running accessibility audits (WAVE, axe DevTools, Lighthouse)
+- Testing website performance and Core Web Vitals
+- Validating cross-browser compatibility on real devices
+- Creating automated test cases for functional testing
+- Testing APIs and integrations
+- Performing visual regression testing
+- Testing Mendix applications end-to-end
+- Creating comprehensive test plans and bug reports
+
+**Free Tools Included**:
+- **Browser Tools**: Chrome DevTools, Firefox Developer Tools, Lighthouse
+- **Accessibility**: WAVE, axe DevTools, Accessibility Insights
+- **Automation**: Selenium IDE, Katalon Recorder, Ghost Inspector (free tier)
+- **Cross-Browser**: BrowserStack Live (free tier), LambdaTest (free tier)
+- **Performance**: WebPageTest, GTmetrix (free tier), PageSpeed Insights
+- **API Testing**: Postman (free tier), Hoppscotch
+- **Visual Testing**: Percy (free tier), BackstopJS
+
+**Key Constraint**: All tools must be free or have usable free tiers, and must be web-based (no local installations required)
+
+---
+
 ## Quick Reference Guide (`claude-skills/skills/skills.md`)
 
 A comprehensive overview document that includes:
-- Descriptions of all 5 skills
+- Descriptions of all 6 skills
 - When to use each skill
 - Skill selection guide (by task type)
 - Technology stack overview
@@ -209,6 +249,16 @@ Using the UX Designer skill, help me organize my Figma file
 structure for a design system
 ```
 
+```
+As an Automation Tester, create a test plan for accessibility
+testing our Mendix application using free tools only
+```
+
+```
+Using the Automation Tester skill, help me test cross-browser
+compatibility with BrowserStack free tier
+```
+
 ### Combining Skills
 
 You can combine multiple skills for complex workflows:
@@ -243,6 +293,15 @@ Atlas UI.
 - User Interviews → **UX Researcher**
 - Journey Mapping → **UX Researcher** or **UX Designer**
 
+**Testing & Quality Assurance**:
+- Accessibility Testing → **Automation Tester**
+- Performance Testing → **Automation Tester**
+- Cross-Browser Testing → **Automation Tester**
+- Functional Testing → **Automation Tester**
+- API Testing → **Automation Tester**
+- Mendix App Testing → **Automation Tester**
+- Visual Regression Testing → **Automation Tester**
+
 ## Your Technology Stack
 
 The skills are optimized for:
@@ -255,6 +314,7 @@ The skills are optimized for:
 - **Scripting**: Vanilla JavaScript (ES6+, no external libraries)
 - **Design Systems**: CSS Variables, BEM, component architecture
 - **Accessibility**: WCAG 2.1 AA compliance
+- **Testing**: Free, web-based tools (Lighthouse, WAVE, Selenium IDE, Postman, BrowserStack free tier)
 
 ## Typical Workflow
 
@@ -281,6 +341,16 @@ The skills are optimized for:
 - Integrate design system into Mendix
 - Customize Atlas UI theme
 - Implement responsive behavior
+
+### 5. Testing Phase
+**Use**: Automation Tester skill
+- Run accessibility tests (WAVE, axe, Lighthouse)
+- Perform cross-browser testing (BrowserStack, LambdaTest)
+- Execute functional test cases (Selenium IDE)
+- Test responsive behavior on devices
+- Validate performance metrics (WebPageTest, GTmetrix)
+- Test APIs with Postman
+- Document bugs and test results
 
 ## Key Features
 
@@ -405,9 +475,10 @@ Each skill has started with sample feedback entries:
 - **Mendix Developer**: Enhancement request for design property examples
 - **Design System Specialist**: Enhancement request for modern CSS examples
 - **Mendix JavaScript Developer**: Success story about Nanoflow refocus
+- **Automation Tester**: Enhancement request for automated test script examples
 
 ---
 
 **Created**: November 11, 2024
-**Skills Version**: 1.0
+**Skills Version**: 1.1
 **Last Updated**: November 18, 2024

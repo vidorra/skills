@@ -134,6 +134,34 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 
 ---
 
+### 6. Automation Tester
+**Location**: `claude-skills/skills/automation-tester/skill.md`
+
+**Focus**: Testing online tools and websites using free, web-based testing software
+
+**When to Use**:
+- Accessibility testing (WCAG 2.1 AA compliance)
+- Performance testing (Lighthouse, WebPageTest)
+- Cross-browser compatibility testing
+- Functional testing with browser automation
+- API testing with Postman
+- Visual regression testing
+- Mobile responsive testing
+- Mendix application testing
+- Bug reporting and test documentation
+
+**Key Strengths**:
+- Free, web-based testing tools only (no installations required)
+- Browser DevTools, Lighthouse, WAVE, axe DevTools
+- Selenium IDE, Katalon Recorder for automation
+- BrowserStack/LambdaTest free tiers for cross-browser testing
+- Postman/Hoppscotch for API testing
+- Test case creation and bug reporting
+- WCAG accessibility expertise
+- Mendix-specific testing scenarios
+
+---
+
 ## Skill Selection Guide
 
 ### For Design Work
@@ -157,6 +185,15 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 - **Customer Personas** → Use **UX Researcher** skill
 - **User Interviews** → Use **UX Researcher** skill
 - **Journey Mapping** → Use **UX Researcher** or **UX Designer**
+
+### For Testing & Quality Assurance
+- **Accessibility Testing** → Use **Automation Tester** skill
+- **Performance Testing** → Use **Automation Tester** skill
+- **Cross-Browser Testing** → Use **Automation Tester** skill
+- **Functional Testing** → Use **Automation Tester** skill
+- **API Testing** → Use **Automation Tester** skill
+- **Mendix App Testing** → Use **Automation Tester** skill
+- **Visual Regression Testing** → Use **Automation Tester** skill
 
 ---
 
@@ -199,6 +236,13 @@ These skills are optimized for the following stack:
    - Customize Atlas UI theme
    - Implement responsive behavior
 
+5. **Testing Phase** → **Automation Tester** skill
+   - Run accessibility tests (WAVE, axe, Lighthouse)
+   - Perform cross-browser testing
+   - Execute functional test cases
+   - Test responsive behavior on devices
+   - Validate performance metrics
+
 ---
 
 ## Notes
@@ -221,7 +265,8 @@ To use a skill, simply reference it when asking for help:
 - "Using the Design System Specialist skill, create a button component with CSS variables"
 - "As a Mendix JavaScript Developer, create a JavaScript Action to validate email addresses for Nanoflows"
 - "Using the UX Designer skill, help me organize my Figma file structure for a design system"
-- "As a Mendix JavaScript Developer, create a JavaScript Action that retrieves geolocation and updates a Mendix object"
+- "As an Automation Tester, create a test plan for accessibility testing our Mendix application using free tools"
+- "Using the Automation Tester skill, help me test cross-browser compatibility with BrowserStack free tier"
 
 ---
 
