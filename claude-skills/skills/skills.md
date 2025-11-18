@@ -220,6 +220,68 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 
 ---
 
+### 9. Contract Review & Legal Advisor
+**Location**: `claude-skills/skills/contract-legal-advisor/skill.md`
+
+**Focus**: Dutch freelance contract review, DBA compliance, legal protection for ZZP'ers
+
+**When to Use**:
+- Reviewing client contracts before signing
+- Assessing DBA/VAR risk (schijnzelfstandigheid)
+- Understanding liability clauses
+- Negotiating contract terms
+- Reviewing IP rights and ownership
+- Evaluating payment terms and conditions
+- Checking termination clauses
+- Understanding insurance requirements
+- When unsure about legal implications
+- Deciding whether to hire a lawyer
+
+**Key Strengths**:
+- Dutch ZZP legal landscape expertise
+- DBA risk assessment and scoring
+- Contract red flag identification
+- Section-by-section review guidance
+- Negotiation scripts and strategies
+- Model clauses in Dutch and English
+- Liability protection advice
+- IP rights negotiation
+- Clear guidance on when to get legal help
+- Practical, not just theoretical advice
+
+---
+
+### 10. Project Scoping & Estimation Specialist
+**Location**: `claude-skills/skills/project-scoping-estimator/skill.md`
+
+**Focus**: Accurate project estimation for UX and Mendix projects, preventing underpricing
+
+**When to Use**:
+- Estimating new UX projects
+- Quoting Mendix development work
+- Creating project proposals
+- Breaking down complex projects
+- Calculating fair pricing
+- Preventing scope creep
+- Defining project deliverables
+- Assessing project risks
+- Choosing pricing model (hourly vs. fixed)
+- Creating phased project plans
+
+**Key Strengths**:
+- Specific time estimates for UX tasks
+- Specific time estimates for Mendix tasks
+- Work breakdown structure templates
+- Dutch market rate guidance (2024)
+- Multiple pricing models with formulas
+- Scope creep prevention strategies
+- Complete estimation templates
+- Red flag identification
+- Risk assessment and buffers
+- Client discovery questions
+
+---
+
 ## Skill Selection Guide
 
 ### For Design Work
@@ -271,6 +333,24 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 - **Professional Networking** → Use **English Business Text Writer** skill
 - **Setting Boundaries** → Use **English Business Text Writer** skill
 - **Any English Business Text** → Use **English Business Text Writer** skill
+
+### For Business & Legal (ZZP/Freelance)
+- **Contract Review** → Use **Contract Review & Legal Advisor** skill
+- **DBA Risk Assessment** → Use **Contract Review & Legal Advisor** skill
+- **Liability Clauses** → Use **Contract Review & Legal Advisor** skill
+- **IP Rights Negotiation** → Use **Contract Review & Legal Advisor** skill
+- **Payment Terms Review** → Use **Contract Review & Legal Advisor** skill
+- **Contract Negotiation** → Use **Contract Review & Legal Advisor** skill
+- **Legal Red Flags** → Use **Contract Review & Legal Advisor** skill
+
+### For Project Management & Pricing
+- **Project Estimation** → Use **Project Scoping & Estimation Specialist** skill
+- **Creating Quotes** → Use **Project Scoping & Estimation Specialist** skill
+- **Scope Definition** → Use **Project Scoping & Estimation Specialist** skill
+- **Preventing Scope Creep** → Use **Project Scoping & Estimation Specialist** skill
+- **Pricing Strategy** → Use **Project Scoping & Estimation Specialist** skill
+- **Time Estimates** → Use **Project Scoping & Estimation Specialist** skill
+- **Risk Assessment** → Use **Project Scoping & Estimation Specialist** skill
 
 ---
 
@@ -347,8 +427,12 @@ To use a skill, simply reference it when asking for help:
 - "Using the Dutch Business Text Writer skill, create a friendly payment reminder for an invoice that's 10 days overdue"
 - "As an English Business Text Writer, help me write a proposal for consulting services"
 - "Using the English Business Text Writer skill, create a second payment reminder for a client"
+- "As a Contract Review & Legal Advisor, review this client contract and identify red flags and DBA risks"
+- "Using the Contract Review & Legal Advisor skill, help me negotiate better liability terms in this contract"
+- "As a Project Scoping & Estimation Specialist, help me estimate a Mendix app with 15 entities and 30 pages"
+- "Using the Project Scoping & Estimation Specialist skill, create a quote for a UX redesign project"
 
 ---
 
 **Last Updated**: November 2024
-**Skills Version**: 1.0
+**Skills Version**: 2.0

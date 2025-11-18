@@ -4,7 +4,7 @@ This document provides an overview of the specialized AI skills created for UX/M
 
 ## What Was Created
 
-A comprehensive set of 8 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer and ZZP'er, along with a quick reference guide. Includes personalized Dutch and English business writing skills using your authentic communication style.
+A comprehensive set of 10 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer and ZZP'er, along with a quick reference guide. Includes personalized business writing skills, legal protection for contracts, and project estimation tools.
 
 ### Files Created
 
@@ -26,10 +26,14 @@ claude-skills/skills/
 │   └── skill.md                    # Dutch Business Text Writer skill (Jens's style)
 ├── english-business-writer/
 │   └── skill.md                    # English Business Text Writer skill (Jens's style)
+├── contract-legal-advisor/
+│   └── skill.md                    # Contract Review & Legal Advisor skill (Dutch ZZP)
+├── project-scoping-estimator/
+│   └── skill.md                    # Project Scoping & Estimation Specialist skill
 └── skills.md                       # Quick reference overview
 ```
 
-## The 8 Skills
+## The 10 Skills
 
 ### 1. UX Designer (`claude-skills/skills/ux-designer/skill.md`)
 
@@ -304,10 +308,127 @@ This skill includes the complete Claude approach to building customer personas:
 
 ---
 
+### 9. Contract Review & Legal Advisor (`claude-skills/skills/contract-legal-advisor/skill.md`)
+
+**Purpose**: Expert in Dutch freelance contract review, DBA compliance, and legal protection for ZZP'ers
+
+**Core Capabilities**:
+- Dutch ZZP legal landscape and DBA/VAR compliance
+- Contract review and red flag identification
+- Section-by-section analysis (scope, payment, liability, IP, etc.)
+- DBA risk assessment and scoring system
+- Negotiation strategies and scripts
+- Model clauses in Dutch and English
+- IP rights and ownership negotiation
+- Liability protection guidance
+- Understanding insurance requirements
+- Clear guidance on when to hire a lawyer
+
+**When to Use**:
+- Reviewing client contracts before signing
+- Assessing DBA/VAR risk (schijnzelfstandigheid)
+- Understanding and negotiating liability clauses
+- Reviewing IP rights and ownership terms
+- Evaluating payment terms and conditions
+- Checking termination clauses
+- Negotiating contract terms with clients
+- Identifying legal red flags
+- Understanding insurance requirements
+- Deciding whether legal help is needed
+
+**Key Red Flags Identified**:
+- **DBA Risk**: Fixed hours, exclusive relationship, hierarchical authority
+- **Liability**: Unlimited liability, one-sided terms
+- **IP Rights**: Transfer before payment, no portfolio rights
+- **Payment**: Terms > 60 days, "payment when paid"
+- **Non-Compete**: Without compensation, too broad
+- **Termination**: Asymmetric terms, no payment for work done
+
+**Negotiation Support**:
+- Scripts for common scenarios
+- What to say to clients
+- Where to compromise vs. hold firm
+- Alternative proposal language
+- When to walk away
+
+**Dutch Legal Context**:
+- Opdrachtenovereenkomst best practices
+- Understanding aansprakelijkheid
+- Auteursrecht (copyright) under Dutch law
+- Wettelijke rente for late payments
+- Schijnzelfstandigheid prevention
+
+---
+
+### 10. Project Scoping & Estimation Specialist (`claude-skills/skills/project-scoping-estimator/skill.md`)
+
+**Purpose**: Expert at scoping and estimating UX and Mendix projects to ensure accurate pricing and prevent underpricing
+
+**Core Capabilities**:
+- UX project estimation (research, wireframes, design, prototyping)
+- Mendix development estimation (domain model, pages, logic, integrations)
+- Work breakdown structure creation
+- Specific time estimates per task type
+- Multiple pricing models (hourly, fixed, phased, value-based)
+- Dutch market rates (2024) for UX and Mendix roles
+- Scope creep prevention strategies
+- Risk assessment and buffer calculations
+- Client discovery question templates
+- Complete estimation templates
+
+**When to Use**:
+- Estimating new UX design projects
+- Quoting Mendix development work
+- Creating project proposals and quotes
+- Breaking down complex projects into tasks
+- Calculating fair and profitable pricing
+- Preventing scope creep
+- Defining clear project deliverables
+- Assessing project risks
+- Choosing the right pricing model
+- Creating phased project plans
+
+**Estimation Coverage**:
+- **UX Tasks**: Discovery, research, IA, wireframes, visual design, prototyping, handoff
+- **Mendix Tasks**: Setup, domain model, pages, microflows, integrations, security, theming, testing
+- **Time Estimates**: Specific hour ranges per task type
+- **Buffers**: 15-25% based on complexity
+- **Communication Time**: 2-4 hours per week
+
+**Pricing Models Included**:
+- Hourly rate pricing
+- Fixed price with risk factors
+- Phased approach (discovery → design → development)
+- Day rate calculations
+- Value-based pricing strategies
+
+**Dutch Market Rates (2024)**:
+- Junior UX Designer: €50-70/hour
+- Medior UX Designer: €70-95/hour
+- Senior UX Designer: €95-130/hour
+- Junior Mendix Dev: €60-80/hour
+- Medior Mendix Dev: €80-110/hour
+- Senior Mendix Dev: €110-150/hour
+- **UX + Mendix combo**: €85-130/hour (premium for rare skillset)
+
+**Scope Creep Prevention**:
+- Clear IN/OUT of scope definitions
+- Revision round limits
+- Change request process
+- Scripts for handling "just quickly" requests
+- Written approval requirements
+
+**Complete Templates**:
+- Simple UX project (5-page website redesign)
+- Simple Mendix app (CRUD with 5 entities)
+- Full UX + Mendix project (new app with full UX process)
+
+---
+
 ## Quick Reference Guide (`claude-skills/skills/skills.md`)
 
 A comprehensive overview document that includes:
-- Descriptions of all 8 skills
+- Descriptions of all 10 skills
 - When to use each skill
 - Skill selection guide (by task type)
 - Technology stack overview
@@ -378,6 +499,26 @@ Using the English Business Text Writer skill, create a second payment
 reminder for a client who's 30 days overdue
 ```
 
+```
+As a Contract Review & Legal Advisor, review this client contract
+and identify DBA risks and red flags
+```
+
+```
+Using the Contract Review & Legal Advisor skill, help me negotiate
+better liability terms in this MSA
+```
+
+```
+As a Project Scoping & Estimation Specialist, estimate a Mendix app
+with 15 entities, 30 pages, and 2 REST integrations
+```
+
+```
+Using the Project Scoping & Estimation Specialist skill, create a
+detailed quote for redesigning a 10-page Mendix application
+```
+
 ### Combining Skills
 
 You can combine multiple skills for complex workflows:
@@ -438,6 +579,24 @@ Atlas UI.
 - Professional Networking → **English Business Text Writer**
 - Setting Boundaries → **English Business Text Writer**
 - Any English Business Text → **English Business Text Writer**
+
+**Business & Legal (ZZP/Freelance)**:
+- Contract Review → **Contract Review & Legal Advisor**
+- DBA Risk Assessment → **Contract Review & Legal Advisor**
+- Liability Clauses → **Contract Review & Legal Advisor**
+- IP Rights Negotiation → **Contract Review & Legal Advisor**
+- Payment Terms Review → **Contract Review & Legal Advisor**
+- Contract Negotiation → **Contract Review & Legal Advisor**
+- Legal Red Flags → **Contract Review & Legal Advisor**
+
+**Project Management & Pricing**:
+- Project Estimation → **Project Scoping & Estimation Specialist**
+- Creating Quotes → **Project Scoping & Estimation Specialist**
+- Scope Definition → **Project Scoping & Estimation Specialist**
+- Preventing Scope Creep → **Project Scoping & Estimation Specialist**
+- Pricing Strategy → **Project Scoping & Estimation Specialist**
+- Time Estimates → **Project Scoping & Estimation Specialist**
+- Risk Assessment → **Project Scoping & Estimation Specialist**
 
 ## Your Technology Stack
 
@@ -617,5 +776,5 @@ Each skill has started with sample feedback entries:
 ---
 
 **Created**: November 11, 2024
-**Skills Version**: 1.1
+**Skills Version**: 2.0
 **Last Updated**: November 18, 2024
