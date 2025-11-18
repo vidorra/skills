@@ -4,7 +4,7 @@ This document provides an overview of the specialized AI skills created for UX/M
 
 ## What Was Created
 
-A comprehensive set of 6 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer, along with a quick reference guide.
+A comprehensive set of 7 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer and ZZP'er, along with a quick reference guide.
 
 ### Files Created
 
@@ -22,10 +22,12 @@ claude-skills/skills/
 │   └── skill.md                    # Mendix JavaScript Developer skill
 ├── automation-tester/
 │   └── skill.md                    # Automation Tester skill
+├── dutch-business-writer/
+│   └── skill.md                    # Dutch Business Text Writer skill
 └── skills.md                       # Quick reference overview
 ```
 
-## The 6 Skills
+## The 7 Skills
 
 ### 1. UX Designer (`claude-skills/skills/ux-designer/skill.md`)
 
@@ -205,10 +207,57 @@ This skill includes the complete Claude approach to building customer personas:
 
 ---
 
+### 7. Dutch Business Text Writer (`claude-skills/skills/dutch-business-writer/skill.md`)
+
+**Purpose**: Expert in professional Dutch business correspondence for ZZP'ers and small businesses
+
+**Core Capabilities**:
+- Professional Dutch business writing (formal, semi-formal, informal)
+- ZZP-specific correspondence (quotes, invoices, contracts, client emails)
+- Payment reminders and collection communication
+- Business announcements and networking
+- Client acquisition and relationship management
+- Professional boundary-setting language
+- Complaint handling and customer service
+- Dutch business culture and etiquette
+- Legal compliance (AVG/GDPR, invoicing requirements)
+
+**When to Use**:
+- Writing quotes and proposals (offertes)
+- Creating invoice correspondence
+- Drafting payment reminders (friendly to assertive)
+- Professional client emails
+- Contracts and service agreements
+- First contact with potential clients
+- Setting professional boundaries
+- Announcing business updates (rates, vacation, new services)
+- Handling complaints and difficult situations
+- Any Dutch business text needs
+
+**Key Templates Included**:
+- **Quotes**: Formal and informal project proposals
+- **Invoices**: Professional invoice correspondence
+- **Payment Reminders**: Three-tier approach (friendly, assertive, final)
+- **Client Acquisition**: Cold outreach and networking follow-ups
+- **Service Offers**: New service announcements to existing clients
+- **Boundary Setting**: Scope creep and additional work communication
+- **Business Updates**: Rate changes, vacation announcements
+- **Rejections**: Professional project declinations
+
+**Cultural Focus**:
+- Dutch directness balanced with politeness
+- Appropriate use of "u" vs "je"
+- Efficient, clear communication
+- Collaborative and egalitarian tone
+- Professional but relatively informal style
+- Transparent pricing and payment communication
+
+---
+
 ## Quick Reference Guide (`claude-skills/skills/skills.md`)
 
 A comprehensive overview document that includes:
-- Descriptions of all 6 skills
+- Descriptions of all 7 skills
 - When to use each skill
 - Skill selection guide (by task type)
 - Technology stack overview
@@ -259,6 +308,16 @@ Using the Automation Tester skill, help me test cross-browser
 compatibility with BrowserStack free tier
 ```
 
+```
+As a Dutch Business Text Writer, help me write a professional quote
+for a new web design project
+```
+
+```
+Using the Dutch Business Text Writer skill, create a friendly payment
+reminder for an invoice that's 10 days overdue
+```
+
 ### Combining Skills
 
 You can combine multiple skills for complex workflows:
@@ -301,6 +360,15 @@ Atlas UI.
 - API Testing → **Automation Tester**
 - Mendix App Testing → **Automation Tester**
 - Visual Regression Testing → **Automation Tester**
+
+**Business Communication (ZZP/Dutch)**:
+- Quotes & Proposals → **Dutch Business Text Writer**
+- Invoices & Payment Reminders → **Dutch Business Text Writer**
+- Client Emails → **Dutch Business Text Writer**
+- Contracts & Agreements → **Dutch Business Text Writer**
+- Professional Networking → **Dutch Business Text Writer**
+- Setting Boundaries → **Dutch Business Text Writer**
+- Any Dutch Business Text → **Dutch Business Text Writer**
 
 ## Your Technology Stack
 

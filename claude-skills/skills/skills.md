@@ -162,6 +162,36 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 
 ---
 
+### 7. Dutch Business Text Writer
+**Location**: `claude-skills/skills/dutch-business-writer/skill.md`
+
+**Focus**: Professional Dutch business correspondence for ZZP'ers and small businesses
+
+**When to Use**:
+- Writing quotes and proposals (offertes)
+- Creating invoice correspondence
+- Drafting contracts and agreements
+- Professional client emails
+- Payment reminders and collection
+- Business announcements and updates
+- Client acquisition and networking
+- Setting professional boundaries
+- Complaint handling and customer service
+- All Dutch business communication
+
+**Key Strengths**:
+- Native Dutch business writing expertise
+- ZZP-specific correspondence (quotes, invoices, reminders)
+- Cultural awareness of Dutch business etiquette
+- Formal, semi-formal, and informal tone mastery
+- Clear pricing and payment communication
+- Professional boundary-setting language
+- Legal compliance (AVG/GDPR, invoicing requirements)
+- Ready-to-use templates for common scenarios
+- Both direct and diplomatic phrasing options
+
+---
+
 ## Skill Selection Guide
 
 ### For Design Work
@@ -194,6 +224,15 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 - **API Testing** → Use **Automation Tester** skill
 - **Mendix App Testing** → Use **Automation Tester** skill
 - **Visual Regression Testing** → Use **Automation Tester** skill
+
+### For Business Communication (ZZP/Dutch)
+- **Quotes & Proposals** → Use **Dutch Business Text Writer** skill
+- **Invoices & Payment Reminders** → Use **Dutch Business Text Writer** skill
+- **Client Emails** → Use **Dutch Business Text Writer** skill
+- **Contracts & Agreements** → Use **Dutch Business Text Writer** skill
+- **Professional Networking** → Use **Dutch Business Text Writer** skill
+- **Setting Boundaries** → Use **Dutch Business Text Writer** skill
+- **Any Dutch Business Text** → Use **Dutch Business Text Writer** skill
 
 ---
 
@@ -267,6 +306,8 @@ To use a skill, simply reference it when asking for help:
 - "Using the UX Designer skill, help me organize my Figma file structure for a design system"
 - "As an Automation Tester, create a test plan for accessibility testing our Mendix application using free tools"
 - "Using the Automation Tester skill, help me test cross-browser compatibility with BrowserStack free tier"
+- "As a Dutch Business Text Writer, help me write a professional quote for a new client"
+- "Using the Dutch Business Text Writer skill, create a payment reminder for an overdue invoice"
 
 ---
 
