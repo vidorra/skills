@@ -152,6 +152,68 @@ export async function RetrieveByXPath(entity, constraint) {
 ```
 
 ### Browser API Integration
+
+#### Get Geolocation and Update Mendix Object
+```javascript
+/**
+ * Get current geolocation and update a Mendix object with the coordinates
+ * @param {MxObject} locationObject - Mendix object to update with location data
+ * @param {string} latitudeAttr - Attribute name for latitude
+ * @param {string} longitudeAttr - Attribute name for longitude
+ * @param {string} accuracyAttr - Attribute name for accuracy
+ * @returns {Promise<boolean>}
+ */
+export async function GetLocationAndUpdate(locationObject, latitudeAttr, longitudeAttr, accuracyAttr) {
+    // BEGIN USER CODE
+    return new Promise((resolve, reject) => {
+        if (!navigator.geolocation) {
+            reject(new Error("Geolocation is not supported by this browser"));
+            return;
+        }
+
+        if (!locationObject) {
+            reject(new Error("Location object is null or undefined"));
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                try {
+                    // Update the Mendix object with location data
+                    locationObject.set(latitudeAttr, position.coords.latitude);
+                    locationObject.set(longitudeAttr, position.coords.longitude);
+                    locationObject.set(accuracyAttr, position.coords.accuracy);
+
+                    // Commit the changes to the server
+                    mx.data.commit({
+                        mxobj: locationObject,
+                        callback: () => {
+                            mx.ui.info("Location updated successfully", false);
+                            resolve(true);
+                        },
+                        error: (error) => {
+                            reject(new Error(`Failed to commit location: ${error.message}`));
+                        }
+                    });
+                } catch (error) {
+                    reject(new Error(`Failed to update object: ${error.message}`));
+                }
+            },
+            (error) => {
+                reject(new Error(`Geolocation error: ${error.message}`));
+            },
+            {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
+            }
+        );
+    });
+    // END USER CODE
+}
+```
+
+#### Get Geolocation Only
 ```javascript
 /**
  * Get current geolocation
