@@ -1,6 +1,6 @@
 # How to Use Your AI Skills
 
-This guide explains how to effectively use your 10 specialized AI skills for UX/Mendix development and freelance business management.
+This guide explains how to effectively use your 12 specialized AI skills for UX/Mendix development, NextJS/SaaS development, and freelance business management.
 
 ## Quick Start
 
@@ -18,24 +18,28 @@ Using the [Skill Name] skill, [request]
 
 **Example**:
 ```
-As a Mendix Developer, help me customize the Atlas UI theme with custom SASS variables
+As a Mendix UX Developer, help me customize the Atlas UI theme with custom SASS variables
 ```
 
-## Your 10 Skills Overview
+## Your 12 Skills Overview
 
 ### Design & Development (Skills 1-6)
 1. **UX Designer** - Figma design, wireframes, prototypes
-2. **Mendix Developer** - Mendix apps, Atlas UI, theming
+2. **Mendix UX Developer** - Mendix apps, Atlas UI, theming
 3. **UX Researcher** - User research, personas, journey maps
 4. **Design System Specialist** - HTML/CSS components, design tokens
 5. **Mendix JavaScript Developer** - JavaScript Actions, Nanoflows
 6. **Automation Tester** - Testing with free web-based tools
 
-### Business & Communication (Skills 7-10)
-7. **Dutch Business Text Writer** - Dutch correspondence (your style)
-8. **English Business Text Writer** - English correspondence (your style)
-9. **Contract Review & Legal Advisor** - Contract review, DBA compliance
-10. **Project Scoping & Estimation** - Project estimates, pricing
+### NextJS & SaaS Development (Skills 7-8)
+7. **NextJS + Tailwind Developer** - SaaS apps, mobile-first, TypeScript
+8. **PDF Designer** - Branded PDFs, proposals, invoices, reports
+
+### Business & Communication (Skills 9-12)
+9. **Dutch Business Text Writer** - Dutch correspondence (your style)
+10. **English Business Text Writer** - English correspondence (your style)
+11. **Contract Review & Legal Advisor** - Contract review, DBA compliance
+12. **Project Scoping & Estimation** - Project estimates, pricing
 
 ---
 
@@ -83,9 +87,9 @@ As a Mendix Developer, help me customize the Atlas UI theme with custom SASS var
 ### Development Phase
 
 **8. Mendix Development**
-- **Skill**: Mendix Developer
+- **Skill**: Mendix UX Developer
 - **Use for**: Building Mendix apps, theming, custom styling
-- **Example**: "As a Mendix Developer, help me create custom design properties for card components with different variants"
+- **Example**: "As a Mendix UX Developer, help me create custom design properties for card components with different variants"
 
 **9. JavaScript Actions (when needed)**
 - **Skill**: Mendix JavaScript Developer
@@ -132,7 +136,7 @@ As a Mendix Developer, help me customize the Atlas UI theme with custom SASS var
 7. Sign contract and start work
 8. User research (if included) → UX Researcher
 9. Design → UX Designer
-10. Development → Mendix Developer + Mendix JavaScript Developer
+10. Development → Mendix UX Developer + Mendix JavaScript Developer
 11. Testing → Automation Tester
 12. Invoice → Dutch/English Business Text Writer
 13. Payment reminder (if needed) → Dutch/English Business Text Writer
@@ -146,7 +150,7 @@ As a Mendix Developer, help me customize the Atlas UI theme with custom SASS var
 3. Send quote → Dutch/English Business Text Writer
 4. Review and sign simple SOW → Contract Review & Legal Advisor (quick check)
 5. Create redesign in Figma → UX Designer
-6. Implement in Mendix → Mendix Developer
+6. Implement in Mendix → Mendix UX Developer
 7. Test accessibility → Automation Tester
 8. Invoice → Dutch/English Business Text Writer
 ```
@@ -178,7 +182,7 @@ As a Mendix Developer, help me customize the Atlas UI theme with custom SASS var
 ### Do's ✅
 
 **Using Skills Effectively**:
-- ✅ **Be specific**: "As a Mendix Developer, create custom design properties for card components" (specific) vs. "Help me with Mendix" (vague)
+- ✅ **Be specific**: "As a Mendix UX Developer, create custom design properties for card components" (specific) vs. "Help me with Mendix" (vague)
 - ✅ **Combine skills**: Use multiple skills in sequence for complex tasks
 - ✅ **Provide context**: Share relevant details (contract clauses, project requirements, etc.)
 - ✅ **Ask follow-up questions**: If the skill asks for clarification, provide it
@@ -195,13 +199,13 @@ As a Mendix Developer, help me customize the Atlas UI theme with custom SASS var
 - ✅ **Start with research**: Use UX Researcher before designing when possible
 - ✅ **Design first, develop second**: Complete Figma designs before Mendix implementation
 - ✅ **Test accessibility**: Always run Automation Tester for WCAG compliance
-- ✅ **Follow Mendix best practices**: Leverage the Mendix Developer skill's knowledge
+- ✅ **Follow Mendix best practices**: Leverage the Mendix UX Developer skill's knowledge
 - ✅ **Write clean JavaScript Actions**: Use proper error handling and JSDoc
 
 ### Don'ts ❌
 
 **Using Skills**:
-- ❌ **Don't use wrong skill**: Don't ask Mendix Developer for UX research help
+- ❌ **Don't use wrong skill**: Don't ask Mendix UX Developer for UX research help
 - ❌ **Don't skip contract review**: "It's standard" doesn't mean it's safe
 - ❌ **Don't underestimate**: Adding "just 10% extra" isn't proper buffering
 - ❌ **Don't accept bad terms**: Use Contract Legal Advisor to negotiate
@@ -217,7 +221,7 @@ As a Mendix Developer, help me customize the Atlas UI theme with custom SASS var
 **Technical Mistakes**:
 - ❌ **Don't skip wireframes**: Jumping to high-fi designs costs more time
 - ❌ **Don't ignore accessibility**: Test early and often (Automation Tester)
-- ❌ **Don't hardcode styles**: Use design properties and SASS variables (Mendix Developer)
+- ❌ **Don't hardcode styles**: Use design properties and SASS variables (Mendix UX Developer)
 - ❌ **Don't use jQuery in Mendix**: Use vanilla JS (Mendix JavaScript Developer)
 - ❌ **Don't skip error handling**: JavaScript Actions need proper try/catch
 
@@ -254,7 +258,7 @@ Step 1: "As a UX Designer, create a component library structure in Figma"
 Step 2: "Using the Design System Specialist skill, convert these Figma components to CSS"
 → Get: HTML/CSS code
 
-Step 3: "As a Mendix Developer, show me how to integrate these as custom design properties"
+Step 3: "As a Mendix UX Developer, show me how to integrate these as custom design properties"
 → Get: Mendix implementation guidance
 ```
 
@@ -472,7 +476,9 @@ Create a personal library:
 | Need to... | Use this Skill | Example Prompt |
 |------------|---------------|----------------|
 | Design UI | UX Designer | "As a UX Designer, help me create a dashboard layout in Figma" |
-| Build Mendix app | Mendix Developer | "As a Mendix Developer, implement this design system in Atlas UI" |
+| Build Mendix app | Mendix UX Developer | "As a Mendix UX Developer, implement this design system in Atlas UI" |
+| Build NextJS SaaS | NextJS + Tailwind Developer | "As a NextJS + Tailwind Developer, create a mobile-first landing page" |
+| Design branded PDFs | PDF Designer | "As a PDF Designer, create a professional proposal template with brand colors" |
 | Do user research | UX Researcher | "As a UX Researcher, create interview questions for SaaS users" |
 | Write JavaScript Action | Mendix JavaScript Developer | "As a Mendix JavaScript Developer, create a form validation action" |
 | Test accessibility | Automation Tester | "As an Automation Tester, create WCAG test plan using free tools" |
@@ -507,5 +513,19 @@ If you're ever unsure:
 
 **Remember**: These skills exist to protect you legally, ensure profitability, maintain quality, and save time. Use them liberally!
 
-**Version**: 2.0
-**Last Updated**: November 18, 2024
+**Version**: 2.2
+**Last Updated**: November 19, 2024
+
+### Recent Updates
+
+**Version 2.2 (November 19, 2024)**:
+- Added **NextJS + Tailwind Developer** skill for SaaS development (mobile-first, no over-engineering)
+- Added **PDF Designer** skill for branded PDF creation (proposals, invoices, reports)
+- Renamed **Mendix Developer** to **Mendix UX Developer** (emphasizing UX focus)
+- Renamed **javascript-developer** directory to **mendix-javascript-developer**
+- Enhanced existing skills with production code examples (SCSS, JavaScript Actions, ReportLab)
+- Total skills increased from 10 to 12
+
+**Version 2.0 (November 18, 2024)**:
+- Added business and legal skills (Dutch/English writers, contract review, project scoping)
+- Expanded from 6 to 10 skills

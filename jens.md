@@ -12,13 +12,13 @@ A comprehensive set of 12 specialized AI skills tailored for your workflow as a 
 claude-skills/skills/
 ├── ux-designer/
 │   └── SKILL.md                    # UX Designer skill
-├── mendix-developer/
-│   └── SKILL.md                    # Mendix Developer skill
+├── mendix-ux-developer/
+│   └── SKILL.md                    # Mendix UX Developer skill
 ├── ux-researcher/
 │   └── SKILL.md                    # UX Researcher skill (with personas)
 ├── design-system-specialist/
 │   └── SKILL.md                    # Design System Specialist skill
-├── javascript-developer/
+├── mendix-javascript-developer/
 │   └── SKILL.md                    # Mendix JavaScript Developer skill
 ├── automation-tester/
 │   └── SKILL.md                    # Automation Tester skill
@@ -62,7 +62,7 @@ claude-skills/skills/
 
 ---
 
-### 2. Mendix Developer (`claude-skills/skills/mendix-developer/skill.md`)
+### 2. Mendix UX Developer (`claude-skills/skills/mendix-ux-developer/SKILL.md`)
 
 **Purpose**: Expert in Mendix low-code development with focus on UX/UI customization
 
@@ -145,7 +145,7 @@ This skill includes the complete Claude approach to building customer personas:
 
 ---
 
-### 5. Mendix JavaScript Developer (`claude-skills/skills/javascript-developer/skill.md`)
+### 5. Mendix JavaScript Developer (`claude-skills/skills/mendix-javascript-developer/SKILL.md`)
 
 **Purpose**: Expert in creating JavaScript Actions for Nanoflows and Mendix Client API
 
@@ -492,7 +492,7 @@ This skill includes the complete Claude approach to building customer personas:
 - Combine with **Business Text Writers** for content + visual design
 - Use **Project Scoping** pricing, then design the quote PDF
 - Apply **UX Designer** principles to PDF layouts
-- Generate PDFs from **Mendix Developer** applications
+- Generate PDFs from **Mendix UX Developer** applications
 
 ---
 
@@ -579,14 +579,14 @@ Based on actual production code from togwaarde and flesvoedingcalculator project
 - Simple, maintainable code
 
 **Integration with Other Skills**:
-- Completely separate from **Mendix Developer** work
+- Completely separate from **Mendix UX Developer** work
 - Can use **UX Designer** for Figma designs → NextJS implementation
 - Apply **Design System Specialist** CSS patterns in Tailwind
 - Use **PDF Designer** for generating PDFs from NextJS apps
 - Combine with **Business Text Writers** for content and copy
 
 **When NOT to Use This Skill**:
-- Mendix projects (use **Mendix Developer** instead)
+- Mendix projects (use **Mendix UX Developer** instead)
 - Pure HTML/CSS sites (use **Design System Specialist**)
 - WordPress or other CMS work
 - Backend-only API development
@@ -619,7 +619,7 @@ for a travel booking app
 ```
 
 ```
-As a Mendix Developer, help me customize the Atlas UI theme with
+As a Mendix UX Developer, help me customize the Atlas UI theme with
 our brand colors
 ```
 
@@ -710,7 +710,7 @@ You can combine multiple skills for complex workflows:
 ```
 Using the UX Designer skill, create a card component in Figma.
 Then, as a Design System Specialist, convert it to HTML/CSS.
-Finally, as a Mendix Developer, show me how to integrate it into
+Finally, as a Mendix UX Developer, show me how to integrate it into
 Atlas UI.
 ```
 
@@ -722,9 +722,9 @@ Atlas UI.
 - Figma to Code → **UX Designer** or **Design System Specialist**
 
 **Mendix Development**:
-- Mendix Apps → **Mendix Developer**
-- Mendix Theming → **Mendix Developer**
-- Mendix + Figma → **UX Designer** + **Mendix Developer**
+- Mendix Apps → **Mendix UX Developer**
+- Mendix Theming → **Mendix UX Developer**
+- Mendix + Figma → **UX Designer** + **Mendix UX Developer**
 
 **NextJS/SaaS Development**:
 - SaaS Applications → **NextJS + Tailwind Developer**
@@ -835,12 +835,12 @@ The skills are optimized for:
 
 ### 3. Development Phase
 **Use**: Multiple skills
-- **Mendix Developer**: Build Mendix app structure and theming
+- **Mendix UX Developer**: Build Mendix app structure and theming
 - **Design System Specialist**: Create HTML/CSS components
 - **Mendix JavaScript Developer**: Create JavaScript Actions for Nanoflows
 
 ### 4. Integration Phase
-**Use**: Mendix Developer
+**Use**: Mendix UX Developer
 - Integrate design system into Mendix
 - Customize Atlas UI theme
 - Implement responsive behavior
@@ -975,7 +975,7 @@ Each skill has started with sample feedback entries:
 
 - **UX Designer**: Enhancement request for Figma plugin recommendations
 - **UX Researcher**: Success story about Claude persona methodology integration
-- **Mendix Developer**: Enhancement request for design property examples
+- **Mendix UX Developer**: Enhancement request for design property examples
 - **Design System Specialist**: Enhancement request for modern CSS examples
 - **Mendix JavaScript Developer**: Success story about Nanoflow refocus
 - **Automation Tester**: Enhancement request for automated test script examples
@@ -990,7 +990,7 @@ Each skill has started with sample feedback entries:
 
 **Version 2.2 (November 19, 2024)**:
 - Added **NextJS + Tailwind Developer** skill (#12) for SaaS development
-- Updated **Mendix Developer** skill with real-world SCSS patterns (FMO Design System)
+- Updated **Mendix UX Developer** skill with real-world SCSS patterns (FMO Design System)
 - Updated **Mendix JavaScript Developer** skill with production JavaScript Actions examples
 - Updated **PDF Designer** skill with ReportLab Python script and improvement recommendations
 - Restructured all skills with proper YAML frontmatter for Claude Code compatibility
