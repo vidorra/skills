@@ -4,7 +4,7 @@ This document provides an overview of the specialized AI skills created for UX/M
 
 ## What Was Created
 
-A comprehensive set of 10 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer and ZZP'er, along with a quick reference guide. Includes personalized business writing skills, legal protection for contracts, and project estimation tools.
+A comprehensive set of 11 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer and ZZP'er, along with a quick reference guide. Includes personalized business writing skills, legal protection for contracts, project estimation tools, and professional PDF design.
 
 ### Files Created
 
@@ -30,10 +30,12 @@ claude-skills/skills/
 │   └── skill.md                    # Contract Review & Legal Advisor skill (Dutch ZZP)
 ├── project-scoping-estimator/
 │   └── skill.md                    # Project Scoping & Estimation Specialist skill
+├── pdf-designer/
+│   └── skill.md                    # PDF Designer skill (branded PDFs)
 └── skills.md                       # Quick reference overview
 ```
 
-## The 10 Skills
+## The 11 Skills
 
 ### 1. UX Designer (`claude-skills/skills/ux-designer/skill.md`)
 
@@ -425,10 +427,77 @@ This skill includes the complete Claude approach to building customer personas:
 
 ---
 
+### 11. PDF Designer (`claude-skills/skills/pdf-designer/skill.md`)
+
+**Purpose**: Expert in creating visually appealing, professional PDF documents that reflect brand identity through strategic use of brand colors, typography, and visual styling
+
+**Core Capabilities**:
+- PDF design principles (visual hierarchy, white space, grid systems)
+- Brand color application in PDFs (60-30-10 rule)
+- Typography and font pairing for PDFs
+- Page layout and information architecture
+- Multiple PDF generation approaches (Figma, Canva, HTML/CSS, Google Docs)
+- Templates for common PDF types (proposals, invoices, reports, portfolios)
+- Print vs. digital PDF optimization
+- Accessibility in PDFs (WCAG compliance, tagged PDFs)
+- Professional quality assurance checklist
+
+**When to Use**:
+- Designing business proposals and quotes (visual design)
+- Creating branded invoices and financial documents
+- Building professional reports and documentation
+- Designing portfolio case studies and project showcases
+- Creating marketing materials (one-pagers, brochures, lead magnets)
+- Converting designs to PDF format
+- Ensuring brand consistency across all PDF documents
+- Optimizing PDFs for print or digital distribution
+
+**PDF Types Covered**:
+- **Business Proposals**: Cover pages, sections, CTAs with brand styling
+- **Reports**: Title pages, TOC, headers/footers, data visualization
+- **Invoices & Quotes**: Professional layouts with clear financial tables
+- **Portfolios**: Project pages with before/after comparisons
+- **Marketing**: One-pagers, brochures, presentations
+
+**Tool Approaches**:
+- **Figma → PDF**: Pixel-perfect design control
+- **Canva**: Fast templates with brand kit customization
+- **HTML/CSS to PDF**: Automated, repeatable generation (Puppeteer, wkhtmltopdf)
+- **Google Docs/Slides**: Collaborative, familiar tools
+- **Microsoft Office**: Word/PowerPoint with brand styling
+
+**Brand Application**:
+- Primary color (60%): Large backgrounds, headers, section dividers
+- Secondary color (30%): Subheadings, accent bars, table headers
+- Accent color (10%): CTAs, highlights, key numbers
+- Neutral colors: Body text, backgrounds, borders
+- Contrast checking for WCAG AA compliance
+
+**Professional Templates Included**:
+- Business proposal template (cover + interior pages)
+- Invoice template (Dutch and English versions)
+- Portfolio case study template
+- Professional report template
+- Marketing one-pager template
+
+**Quality Checklist**:
+- Visual quality (colors, fonts, images, alignment)
+- Content quality (no typos, accurate information)
+- Technical quality (file size, compatibility, metadata)
+- Accessibility (contrast, structure, alt text)
+
+**Integration with Other Skills**:
+- Combine with **Business Text Writers** for content + visual design
+- Use **Project Scoping** pricing, then design the quote PDF
+- Apply **UX Designer** principles to PDF layouts
+- Generate PDFs from **Mendix Developer** applications
+
+---
+
 ## Quick Reference Guide (`claude-skills/skills/skills.md`)
 
 A comprehensive overview document that includes:
-- Descriptions of all 10 skills
+- Descriptions of all 11 skills
 - When to use each skill
 - Skill selection guide (by task type)
 - Technology stack overview
@@ -776,5 +845,5 @@ Each skill has started with sample feedback entries:
 ---
 
 **Created**: November 11, 2024
-**Skills Version**: 2.0
-**Last Updated**: November 18, 2024
+**Skills Version**: 2.1
+**Last Updated**: November 19, 2024

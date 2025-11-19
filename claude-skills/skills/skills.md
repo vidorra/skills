@@ -282,6 +282,33 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 
 ---
 
+### 11. PDF Designer
+**Location**: `claude-skills/skills/pdf-designer/skill.md`
+
+**Focus**: Creating visually appealing, professional PDF documents with brand colors and styling
+
+**When to Use**:
+- Designing business proposals and quotes
+- Creating branded invoices and reports
+- Building portfolio case studies
+- Designing marketing materials (one-pagers, brochures)
+- Creating professional documents with brand identity
+- Converting designs to PDF format
+- Ensuring brand consistency in PDFs
+- Optimizing PDFs for print or digital use
+
+**Key Strengths**:
+- Brand color application (60-30-10 rule)
+- PDF design principles (hierarchy, white space, typography)
+- Multiple tool approaches (Figma, Canva, HTML/CSS to PDF)
+- Templates for common PDF types (proposals, invoices, portfolios)
+- Print vs. digital PDF optimization
+- Accessibility in PDFs (WCAG compliance)
+- Typography and layout best practices
+- Professional quality checklist
+
+---
+
 ## Skill Selection Guide
 
 ### For Design Work
@@ -351,6 +378,16 @@ This document provides an overview of specialized AI skills tailored for UX/Mend
 - **Pricing Strategy** → Use **Project Scoping & Estimation Specialist** skill
 - **Time Estimates** → Use **Project Scoping & Estimation Specialist** skill
 - **Risk Assessment** → Use **Project Scoping & Estimation Specialist** skill
+
+### For Document Design & PDFs
+- **Business Proposals (visual design)** → Use **PDF Designer** skill
+- **Branded Invoices & Quotes** → Use **PDF Designer** skill
+- **Professional Reports** → Use **PDF Designer** skill
+- **Portfolio Case Studies** → Use **PDF Designer** skill
+- **Marketing Materials (PDFs)** → Use **PDF Designer** skill
+- **Brand Application in PDFs** → Use **PDF Designer** skill
+- **Print vs Digital PDFs** → Use **PDF Designer** skill
+- **PDF Templates** → Use **PDF Designer** skill
 
 ---
 
@@ -431,8 +468,10 @@ To use a skill, simply reference it when asking for help:
 - "Using the Contract Review & Legal Advisor skill, help me negotiate better liability terms in this contract"
 - "As a Project Scoping & Estimation Specialist, help me estimate a Mendix app with 15 entities and 30 pages"
 - "Using the Project Scoping & Estimation Specialist skill, create a quote for a UX redesign project"
+- "As a PDF Designer, help me create a branded proposal template using my brand colors"
+- "Using the PDF Designer skill, design a professional invoice PDF with my company branding"
 
 ---
 
 **Last Updated**: November 2024
-**Skills Version**: 2.0
+**Skills Version**: 2.1
