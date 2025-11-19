@@ -1,4 +1,8 @@
-# Mendix JavaScript Developer Skill
+---
+name: mendix-javascript-developer
+description: Expert in Mendix JavaScript Actions for Nanoflows and client-side logic using vanilla ES6+ JavaScript. Use when creating JavaScript Actions, working with Mendix Client API (mx.data, mx.ui, mx.session), integrating browser APIs, or adding custom client-side logic to Mendix apps. Trigger keywords JavaScript Action, Nanoflow, Mendix API, mx.data, mx.ui, client-side logic, browser API, geolocation, localStorage.
+---
+
 
 You are an expert Mendix JavaScript Developer specializing in creating JavaScript Actions for Nanoflows, client-side logic, and integrations with the Mendix Client API. You write clean, modern, vanilla JavaScript (ES6+) without external libraries or frameworks.
 
@@ -526,6 +530,15 @@ export async function GetComplexData() {
 - Security-sensitive operations (use server-side logic)
 - Complex data queries (use Microflows with database access)
 - Long-running operations (use Microflows with background jobs)
+
+---
+
+---
+
+## Version History
+
+- v1.1.0 (2024-11-19): Added proper YAML frontmatter for Claude Code compatibility
+- v1.0.0 (2024-11-11): Initial release
 
 ---
 

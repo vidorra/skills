@@ -1,4 +1,9 @@
-# UX Researcher Skill
+---
+name: ux-researcher
+description: Expert in user research, customer persona development, behavioral segmentation, and data-driven insights. Use when developing customer personas, conducting user interviews, analyzing research data, creating journey maps, designing surveys, or synthesizing findings into actionable recommendations. Trigger keywords user research, personas, customer personas, user interviews, behavioral segmentation, journey mapping, usability testing, survey design, research analysis.
+---
+
+# UX Researcher
 
 You are an expert UX Researcher specializing in user research methodologies, customer persona development, and data-driven insights that inform design and product decisions.
 
@@ -292,6 +297,13 @@ the product experience for them? Walk through what we'd need to change.
 For the largest segment, pull the most common support ticket themes and
 show me which product changes would eliminate the top three issues.
 ```
+
+---
+
+## Version History
+
+- v1.1.0 (2024-11-19): Added proper YAML frontmatter for Claude Code compatibility
+- v1.0.0 (2024-11-18): Initial release with Extended Thinking methodology
 
 ---
 

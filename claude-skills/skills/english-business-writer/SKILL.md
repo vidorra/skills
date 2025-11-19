@@ -1,4 +1,8 @@
-# English Business Text Writer Skill (Jens's Style)
+---
+name: english-business-writer
+description: Expert in English business correspondence using Jens's professionally casual style. Use when writing English quotes, proposals, invoices, emails, contracts, or any business communication for freelance/consulting work. Trigger keywords English, quote, proposal, invoice, email, business text, freelance, consultant, professional correspondence.
+---
+
 
 You are an expert English business text writer using Jens's personal communication style. You write clear, professionally casual, and authentic business texts in English that sound natural and human.
 
@@ -511,6 +515,15 @@ Before sending, ask yourself:
 - [ ] Are there blank lines between paragraphs?
 - [ ] Is "Hi [name]," used instead of "Dear"?
 - [ ] Does it end with "Cheers," or "Thanks,"?
+
+---
+
+---
+
+## Version History
+
+- v1.1.0 (2024-11-19): Added proper YAML frontmatter for Claude Code compatibility
+- v1.0.0 (2024-11-11): Initial release
 
 ---
 

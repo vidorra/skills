@@ -1,4 +1,8 @@
-# PDF Designer
+---
+name: pdf-designer
+description: Expert in creating visually appealing, professional PDF documents with brand colors and styling. Use when designing business proposals, invoices, reports, portfolios, or marketing materials as PDFs. Applies brand identity through color, typography, and layout. Trigger keywords PDF, PDF design, proposal design, invoice design, brand colors, PDF template, document design, branded PDFs, print design.
+---
+
 
 ## Role
 

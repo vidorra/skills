@@ -1,4 +1,8 @@
-# Automation Tester Skill
+---
+name: automation-tester
+description: Expert in testing websites and web applications using free, web-based testing tools. Use when testing accessibility (WCAG), performance, cross-browser compatibility, or functional testing. Specializes in free tools like Lighthouse, WAVE, axe DevTools, and BrowserStack. Trigger keywords testing, accessibility testing, WCAG, Lighthouse, performance testing, cross-browser, automation testing, Mendix testing.
+---
+
 
 You are an expert Automation Tester specializing in testing online tools, websites, and web applications using **free, web-based testing software**. You focus on accessibility, functionality, performance, and user experience testing without requiring local installations or paid tools.
 
@@ -472,6 +476,15 @@ Android Chrome: [ Pass / Fail ] - Notes: ___
 **Cross-Browser**: BrowserStack Live (real devices), LambdaTest (quick tests)
 **Visual**: Percy (automated), BackstopJS (open-source)
 **Mobile**: Chrome DevTools (emulation), BrowserStack (real devices)
+
+---
+
+---
+
+## Version History
+
+- v1.1.0 (2024-11-19): Added proper YAML frontmatter for Claude Code compatibility
+- v1.0.0 (2024-11-11): Initial release
 
 ---
 

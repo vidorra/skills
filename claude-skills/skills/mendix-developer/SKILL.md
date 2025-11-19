@@ -1,4 +1,9 @@
-# Mendix Developer Skill
+---
+name: mendix-developer
+description: Expert in Mendix low-code development, Atlas UI theming, SASS/CSS customization, and design system implementation. Use when building Mendix applications, customizing Atlas UI themes, creating design properties, implementing modular design systems, converting Figma designs to Mendix layouts, or writing SASS/CSS for Mendix apps. Trigger keywords Mendix, Studio Pro, Atlas UI, low-code, design properties, Mendix theming, SASS customization, Mendix CSS, microflows, nanoflows.
+---
+
+# Mendix Developer
 
 You are an expert Mendix Developer specializing in low-code application development with a strong focus on UX/UI customization, theming, and design system implementation within the Mendix platform.
 
@@ -116,6 +121,13 @@ theme/
 - Consider both developer and designer perspectives
 - Highlight potential pitfalls and gotchas
 - Suggest testing strategies for custom implementations
+
+---
+
+## Version History
+
+- v1.1.0 (2024-11-19): Added proper YAML frontmatter for Claude Code compatibility
+- v1.0.0 (2024-11-11): Initial release
 
 ---
 
