@@ -4,38 +4,40 @@ This document provides an overview of the specialized AI skills created for UX/M
 
 ## What Was Created
 
-A comprehensive set of 11 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer and ZZP'er, along with a quick reference guide. Includes personalized business writing skills, legal protection for contracts, project estimation tools, and professional PDF design.
+A comprehensive set of 12 specialized AI skills tailored for your workflow as a UX/Mendix developer/designer and ZZP'er, along with a quick reference guide. Includes personalized business writing skills, legal protection for contracts, project estimation tools, professional PDF design, and NextJS + Tailwind development.
 
 ### Files Created
 
 ```
 claude-skills/skills/
 ├── ux-designer/
-│   └── skill.md                    # UX Designer skill
+│   └── SKILL.md                    # UX Designer skill
 ├── mendix-developer/
-│   └── skill.md                    # Mendix Developer skill
+│   └── SKILL.md                    # Mendix Developer skill
 ├── ux-researcher/
-│   └── skill.md                    # UX Researcher skill (with personas)
+│   └── SKILL.md                    # UX Researcher skill (with personas)
 ├── design-system-specialist/
-│   └── skill.md                    # Design System Specialist skill
+│   └── SKILL.md                    # Design System Specialist skill
 ├── javascript-developer/
-│   └── skill.md                    # Mendix JavaScript Developer skill
+│   └── SKILL.md                    # Mendix JavaScript Developer skill
 ├── automation-tester/
-│   └── skill.md                    # Automation Tester skill
+│   └── SKILL.md                    # Automation Tester skill
 ├── dutch-business-writer/
-│   └── skill.md                    # Dutch Business Text Writer skill (Jens's style)
+│   └── SKILL.md                    # Dutch Business Text Writer skill (Jens's style)
 ├── english-business-writer/
-│   └── skill.md                    # English Business Text Writer skill (Jens's style)
+│   └── SKILL.md                    # English Business Text Writer skill (Jens's style)
 ├── contract-legal-advisor/
-│   └── skill.md                    # Contract Review & Legal Advisor skill (Dutch ZZP)
+│   └── SKILL.md                    # Contract Review & Legal Advisor skill (Dutch ZZP)
 ├── project-scoping-estimator/
-│   └── skill.md                    # Project Scoping & Estimation Specialist skill
+│   └── SKILL.md                    # Project Scoping & Estimation Specialist skill
 ├── pdf-designer/
-│   └── skill.md                    # PDF Designer skill (branded PDFs)
+│   └── SKILL.md                    # PDF Designer skill (branded PDFs)
+├── nextjs-tailwind-developer/
+│   └── SKILL.md                    # NextJS + Tailwind Developer skill (SaaS focused)
 └── skills.md                       # Quick reference overview
 ```
 
-## The 11 Skills
+## The 12 Skills
 
 ### 1. UX Designer (`claude-skills/skills/ux-designer/skill.md`)
 
@@ -494,10 +496,108 @@ This skill includes the complete Claude approach to building customer personas:
 
 ---
 
+### 12. NextJS + Tailwind Developer (`claude-skills/skills/nextjs-tailwind-developer/SKILL.md`)
+
+**Purpose**: Expert in building production-grade SaaS applications with NextJS 14+ App Router and Tailwind CSS, emphasizing mobile-first design, simplicity, and no over-engineering
+
+**Core Capabilities**:
+- NextJS 14+ with App Router architecture
+- Tailwind CSS 3.4+ with JIT compiler and custom configuration
+- Server Components and Client Components patterns
+- Mobile-first responsive design (375px base, scale up)
+- Type-safe development with TypeScript
+- PostgreSQL with Drizzle ORM
+- Authentication and authorization patterns
+- API Routes with consistent structure
+- SEO optimization (metadata API, structured data, sitemaps)
+- Performance optimization (Core Web Vitals, bundle analysis)
+- Security best practices (validation, rate limiting, headers)
+- Form handling and validation (vanilla patterns before libraries)
+- Error handling and loading states
+- Production deployment strategies
+
+**When to Use**:
+- Building SaaS applications from scratch
+- Creating landing pages and marketing sites
+- Developing web applications with NextJS
+- Implementing mobile-first responsive designs
+- Setting up authentication flows
+- Creating API endpoints and server actions
+- Optimizing for performance and SEO
+- Building type-safe applications with TypeScript
+- Working with PostgreSQL and Drizzle ORM
+- Implementing form validation and error handling
+
+**Philosophy - No Over-Engineering**:
+- Start with React state before Redux or Zustand
+- Use vanilla form validation before React Hook Form
+- Fetch API before tanstack-query unless pagination/caching needed
+- CSS Modules or Tailwind before CSS-in-JS libraries
+- Simple patterns before complex abstractions
+- Extract components only when reused 3+ times
+- Prove the need before adding libraries
+
+**Key Patterns Included**:
+- **Mobile-First Design**: 375px starting point, semantic breakpoints
+- **Form Validation**: Field-level validation with touched state tracking
+- **API Routes**: Consistent structure (IP check → rate limit → validate → process)
+- **Error Handling**: User-friendly messages, logging, fallback UI
+- **Server Components**: Default to server, client only when needed
+- **Type Safety**: Strict TypeScript configuration with Drizzle types
+- **Performance**: Web Vitals tracking, bundle analysis, image optimization
+
+**Real-World Production Patterns**:
+Based on actual production code from togwaarde and flesvoedingcalculator projects:
+- Custom form validation without libraries
+- Mobile-first calculator interfaces
+- Type-safe database queries with Drizzle
+- Server-side data fetching patterns
+- Client-side state management
+- Error boundaries and loading states
+- SEO-optimized metadata
+- Accessibility considerations
+
+**Technology Stack**:
+- **Framework**: NextJS 14+ (App Router)
+- **Styling**: Tailwind CSS 3.4+
+- **Language**: TypeScript (strict mode)
+- **Database**: PostgreSQL with Drizzle ORM
+- **Deployment**: Vercel (recommended) or similar platforms
+- **Testing**: Playwright for E2E, Vitest for unit tests
+- **Validation**: Zod for schema validation
+- **Forms**: Start vanilla, use react-hook-form if needed
+- **State**: React state/context, add zustand only if necessary
+
+**Design Principles**:
+- Mobile-first always (375px → 768px → 1024px → 1280px)
+- Utility-first CSS with Tailwind
+- Strong design sense and visual polish
+- Accessibility built-in (semantic HTML, ARIA when needed)
+- Fast page loads and Core Web Vitals optimization
+- SEO-friendly from the start
+- Type safety everywhere
+- Simple, maintainable code
+
+**Integration with Other Skills**:
+- Completely separate from **Mendix Developer** work
+- Can use **UX Designer** for Figma designs → NextJS implementation
+- Apply **Design System Specialist** CSS patterns in Tailwind
+- Use **PDF Designer** for generating PDFs from NextJS apps
+- Combine with **Business Text Writers** for content and copy
+
+**When NOT to Use This Skill**:
+- Mendix projects (use **Mendix Developer** instead)
+- Pure HTML/CSS sites (use **Design System Specialist**)
+- WordPress or other CMS work
+- Backend-only API development
+- Mobile native apps (React Native is different)
+
+---
+
 ## Quick Reference Guide (`claude-skills/skills/skills.md`)
 
 A comprehensive overview document that includes:
-- Descriptions of all 11 skills
+- Descriptions of all 12 skills
 - When to use each skill
 - Skill selection guide (by task type)
 - Technology stack overview
@@ -588,6 +688,21 @@ Using the Project Scoping & Estimation Specialist skill, create a
 detailed quote for redesigning a 10-page Mendix application
 ```
 
+```
+As a NextJS + Tailwind Developer, help me build a mobile-first
+calculator interface with form validation
+```
+
+```
+Using the NextJS + Tailwind Developer skill, create an API route
+with rate limiting and validation for a contact form
+```
+
+```
+As a NextJS + Tailwind Developer, help me set up Drizzle ORM with
+PostgreSQL for a SaaS application
+```
+
 ### Combining Skills
 
 You can combine multiple skills for complex workflows:
@@ -611,11 +726,21 @@ Atlas UI.
 - Mendix Theming → **Mendix Developer**
 - Mendix + Figma → **UX Designer** + **Mendix Developer**
 
+**NextJS/SaaS Development**:
+- SaaS Applications → **NextJS + Tailwind Developer**
+- Landing Pages → **NextJS + Tailwind Developer**
+- Mobile-First Web Apps → **NextJS + Tailwind Developer**
+- API Routes & Server Actions → **NextJS + Tailwind Developer**
+- TypeScript + Drizzle ORM → **NextJS + Tailwind Developer**
+- Form Validation & Handling → **NextJS + Tailwind Developer**
+- SEO & Performance Optimization → **NextJS + Tailwind Developer**
+
 **Front-End Development**:
 - HTML/CSS Components → **Design System Specialist**
 - Mendix JavaScript Actions → **Mendix JavaScript Developer**
 - Design Systems → **Design System Specialist**
 - Nanoflows + JavaScript → **Mendix JavaScript Developer**
+- NextJS Components → **NextJS + Tailwind Developer**
 
 **Research & Strategy**:
 - Customer Personas → **UX Researcher**
@@ -671,6 +796,7 @@ Atlas UI.
 
 The skills are optimized for:
 
+### Mendix Stack
 - **Design**: Figma
 - **Development Platform**: Mendix (low-code)
 - **Styling**: HTML, CSS, SASS/SCSS
@@ -680,6 +806,18 @@ The skills are optimized for:
 - **Design Systems**: CSS Variables, BEM, component architecture
 - **Accessibility**: WCAG 2.1 AA compliance
 - **Testing**: Free, web-based tools (Lighthouse, WAVE, Selenium IDE, Postman, BrowserStack free tier)
+
+### NextJS/SaaS Stack
+- **Framework**: NextJS 14+ (App Router)
+- **Styling**: Tailwind CSS 3.4+
+- **Language**: TypeScript (strict mode)
+- **Database**: PostgreSQL with Drizzle ORM
+- **Deployment**: Vercel or similar platforms
+- **Testing**: Playwright (E2E), Vitest (unit tests)
+- **Validation**: Zod for schema validation
+- **State Management**: React state/context, zustand when needed
+- **Design Approach**: Mobile-first (375px → 768px → 1024px → 1280px)
+- **Philosophy**: No over-engineering, simple patterns first
 
 ## Typical Workflow
 
@@ -845,5 +983,30 @@ Each skill has started with sample feedback entries:
 ---
 
 **Created**: November 11, 2024
-**Skills Version**: 2.1
+**Skills Version**: 2.2
 **Last Updated**: November 19, 2024
+
+### Recent Updates
+
+**Version 2.2 (November 19, 2024)**:
+- Added **NextJS + Tailwind Developer** skill (#12) for SaaS development
+- Updated **Mendix Developer** skill with real-world SCSS patterns (FMO Design System)
+- Updated **Mendix JavaScript Developer** skill with production JavaScript Actions examples
+- Updated **PDF Designer** skill with ReportLab Python script and improvement recommendations
+- Restructured all skills with proper YAML frontmatter for Claude Code compatibility
+- Changed all filenames from `skill.md` to `SKILL.md` per Claude Code requirements
+
+**Version 2.1 (November 18, 2024)**:
+- Enhanced UX Researcher skill with Claude's official persona-building methodology
+- Added comprehensive persona development process (7 steps)
+- Integrated Extended Thinking for pattern analysis
+
+**Version 2.0 (November 11, 2024)**:
+- Added business writing skills (Dutch and English)
+- Added Contract Review & Legal Advisor skill
+- Added Project Scoping & Estimation Specialist skill
+- Added PDF Designer skill
+- Expanded from 6 to 11 skills
+
+**Version 1.0 (Initial Release)**:
+- Core UX and Mendix development skills

@@ -909,6 +909,580 @@ Background: #FFFFFF
 Use case: Product docs, technical reports
 ```
 
+## Real-World Example: ReportLab Brand Book Generator
+
+This production Python script demonstrates generating a comprehensive brand book PDF using ReportLab. It includes custom flowables for color palettes, logos, mockups, and dynamic content.
+
+### Known Issues & Improvement Opportunities
+
+⚠️ **This script has known visual and alignment issues:**
+- Component spacing inconsistencies
+- Alignment problems between elements
+- Visual balance needs refinement
+- Page breaks not always optimal
+
+Use this as a starting point, but expect to refine spacing, alignment, and visual composition.
+
+---
+
+### Full ReportLab Script
+
+```python
+from reportlab.lib.pagesizes import letter
+from reportlab.lib import colors
+from reportlab.lib.units import inch, mm
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, Image
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_RIGHT
+from reportlab.pdfgen import canvas
+from reportlab.platypus.flowables import Flowable
+from reportlab.lib.utils import ImageReader
+import io
+
+# Custom brand colors
+BRAND_COLORS = {
+    'primary': colors.HexColor('#FF6B35'),      # Coral Orange
+    'secondary': colors.HexColor('#004E89'),    # Deep Blue
+    'accent': colors.HexColor('#F7B801'),       # Golden Yellow
+    'dark': colors.HexColor('#2D3142'),         # Charcoal
+    'light': colors.HexColor('#F5F5F5'),        # Light Gray
+}
+
+class ColorPaletteFlowable(Flowable):
+    """Custom flowable to display brand color palette with swatches"""
+
+    def __init__(self, colors_dict, width=6*inch, height=1.5*inch):
+        Flowable.__init__(self)
+        self.colors_dict = colors_dict
+        self.width = width
+        self.height = height
+
+    def draw(self):
+        """Draw color swatches with hex codes"""
+        c = self.canv
+        num_colors = len(self.colors_dict)
+        swatch_width = self.width / num_colors
+        swatch_height = self.height - 30
+
+        x_offset = 0
+        for color_name, color_value in self.colors_dict.items():
+            # Draw color swatch
+            c.setFillColor(color_value)
+            c.rect(x_offset, 30, swatch_width - 5, swatch_height, fill=1, stroke=0)
+
+            # Draw color name
+            c.setFillColor(colors.black)
+            c.setFont('Helvetica-Bold', 10)
+            c.drawString(x_offset + 5, 15, color_name.capitalize())
+
+            # Draw hex code
+            c.setFont('Helvetica', 8)
+            hex_code = str(color_value).upper()
+            c.drawString(x_offset + 5, 3, hex_code)
+
+            x_offset += swatch_width
+
+class LogoDisplayFlowable(Flowable):
+    """Display logo variations (primary, white, black)"""
+
+    def __init__(self, logo_paths, width=6*inch, height=2*inch):
+        Flowable.__init__(self)
+        self.logo_paths = logo_paths  # Dict: {'primary': path, 'white': path, 'black': path}
+        self.width = width
+        self.height = height
+
+    def draw(self):
+        """Draw logo variations side by side"""
+        c = self.canv
+        num_logos = len(self.logo_paths)
+        logo_width = self.width / num_logos
+
+        x_offset = 0
+        for logo_type, logo_path in self.logo_paths.items():
+            # Background for white logo visibility
+            if logo_type == 'white':
+                c.setFillColor(BRAND_COLORS['dark'])
+                c.rect(x_offset, 0, logo_width - 10, self.height, fill=1, stroke=0)
+
+            # Draw logo image (if exists)
+            try:
+                c.drawImage(logo_path,
+                           x_offset + 10,
+                           self.height / 4,
+                           width=logo_width - 30,
+                           height=self.height / 2,
+                           preserveAspectRatio=True,
+                           mask='auto')
+            except:
+                # Placeholder if image doesn't exist
+                c.setFillColor(colors.gray)
+                c.rect(x_offset + 10, self.height / 4,
+                      logo_width - 30, self.height / 2,
+                      fill=1, stroke=1)
+
+            # Label
+            c.setFillColor(colors.black)
+            c.setFont('Helvetica', 9)
+            c.drawString(x_offset + 10, 5, logo_type.capitalize())
+
+            x_offset += logo_width
+
+class MockupFlowable(Flowable):
+    """Display design mockup with caption"""
+
+    def __init__(self, image_path, caption, width=6*inch, height=4*inch):
+        Flowable.__init__(self)
+        self.image_path = image_path
+        self.caption = caption
+        self.width = width
+        self.height = height
+
+    def draw(self):
+        """Draw mockup image with caption below"""
+        c = self.canv
+
+        # Draw image
+        try:
+            c.drawImage(self.image_path,
+                       0, 40,
+                       width=self.width,
+                       height=self.height - 60,
+                       preserveAspectRatio=True,
+                       mask='auto')
+        except:
+            # Placeholder rectangle if image missing
+            c.setFillColor(colors.lightgrey)
+            c.rect(0, 40, self.width, self.height - 60, fill=1, stroke=1)
+            c.setFillColor(colors.gray)
+            c.setFont('Helvetica', 12)
+            c.drawCentredString(self.width / 2, self.height / 2, "Mockup Image")
+
+        # Draw caption
+        c.setFillColor(colors.black)
+        c.setFont('Helvetica-Oblique', 10)
+        c.drawCentredString(self.width / 2, 20, self.caption)
+
+def create_brandbook(filename="brandbook.pdf"):
+    """Generate complete brand book PDF"""
+
+    # Document setup
+    doc = SimpleDocTemplate(
+        filename,
+        pagesize=letter,
+        rightMargin=0.75*inch,
+        leftMargin=0.75*inch,
+        topMargin=1*inch,
+        bottomMargin=0.75*inch
+    )
+
+    # Container for PDF elements
+    story = []
+
+    # Styles
+    styles = getSampleStyleSheet()
+
+    # Custom styles
+    title_style = ParagraphStyle(
+        'CustomTitle',
+        parent=styles['Heading1'],
+        fontSize=36,
+        textColor=BRAND_COLORS['primary'],
+        spaceAfter=12,
+        alignment=TA_CENTER,
+        fontName='Helvetica-Bold'
+    )
+
+    heading_style = ParagraphStyle(
+        'CustomHeading',
+        parent=styles['Heading2'],
+        fontSize=24,
+        textColor=BRAND_COLORS['secondary'],
+        spaceAfter=12,
+        spaceBefore=12,
+        fontName='Helvetica-Bold'
+    )
+
+    subheading_style = ParagraphStyle(
+        'CustomSubHeading',
+        parent=styles['Heading3'],
+        fontSize=16,
+        textColor=BRAND_COLORS['dark'],
+        spaceAfter=8,
+        spaceBefore=8,
+        fontName='Helvetica-Bold'
+    )
+
+    body_style = ParagraphStyle(
+        'CustomBody',
+        parent=styles['BodyText'],
+        fontSize=11,
+        textColor=BRAND_COLORS['dark'],
+        spaceAfter=10,
+        leading=14,
+        fontName='Helvetica'
+    )
+
+    # === COVER PAGE ===
+    story.append(Spacer(1, 2*inch))
+    story.append(Paragraph("FLESVOEDINGCALCULATOR", title_style))
+    story.append(Spacer(1, 0.3*inch))
+    story.append(Paragraph("Brand Guidelines 2024", heading_style))
+    story.append(Spacer(1, 0.2*inch))
+    story.append(Paragraph("Visual Identity & Design Standards", body_style))
+    story.append(PageBreak())
+
+    # === INTRODUCTION ===
+    story.append(Paragraph("Introduction", heading_style))
+    story.append(Paragraph(
+        """This brand book defines the visual identity of FlesvoedingCalculator.
+        It ensures consistency across all touchpoints and provides clear guidelines
+        for maintaining brand integrity.""",
+        body_style
+    ))
+    story.append(Spacer(1, 0.3*inch))
+
+    # === MISSION & VALUES ===
+    story.append(Paragraph("Mission & Values", subheading_style))
+    story.append(Paragraph(
+        """FlesvoedingCalculator empowers parents with accurate, science-based
+        bottle feeding calculations. We value precision, accessibility, and
+        supporting parental confidence.""",
+        body_style
+    ))
+    story.append(Spacer(1, 0.5*inch))
+
+    # === BRAND COLORS ===
+    story.append(Paragraph("Brand Colors", heading_style))
+    story.append(Paragraph(
+        """Our color palette reflects warmth, trust, and clarity. Use these colors
+        consistently across all brand materials.""",
+        body_style
+    ))
+    story.append(Spacer(1, 0.2*inch))
+
+    # Color palette flowable
+    story.append(ColorPaletteFlowable(BRAND_COLORS))
+    story.append(Spacer(1, 0.3*inch))
+
+    # Color usage guidelines
+    story.append(Paragraph("Color Usage", subheading_style))
+    color_usage_data = [
+        ['Color', 'Usage', 'Examples'],
+        ['Primary (Coral)', 'Headers, CTAs, accents', 'Buttons, headings, icons'],
+        ['Secondary (Blue)', 'Backgrounds, sections', 'Hero sections, cards'],
+        ['Accent (Yellow)', 'Highlights, warnings', 'Tips, important info'],
+        ['Dark (Charcoal)', 'Body text, UI elements', 'Paragraphs, labels'],
+        ['Light (Gray)', 'Backgrounds, borders', 'Page background, dividers'],
+    ]
+
+    color_table = Table(color_usage_data, colWidths=[1.5*inch, 2*inch, 2.5*inch])
+    color_table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), BRAND_COLORS['secondary']),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 10),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.white),
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+        ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
+        ('FONTSIZE', (0, 1), (-1, -1), 9),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, BRAND_COLORS['light']]),
+    ]))
+    story.append(color_table)
+    story.append(PageBreak())
+
+    # === TYPOGRAPHY ===
+    story.append(Paragraph("Typography", heading_style))
+    story.append(Paragraph(
+        """Our typographic system prioritizes readability and modern aesthetics.
+        Consistent type usage creates visual harmony.""",
+        body_style
+    ))
+    story.append(Spacer(1, 0.2*inch))
+
+    # Typography table
+    typo_data = [
+        ['Element', 'Font', 'Size', 'Weight', 'Usage'],
+        ['H1 Headings', 'Inter', '36-48px', 'Bold', 'Page titles'],
+        ['H2 Headings', 'Inter', '28-32px', 'Bold', 'Section headers'],
+        ['H3 Headings', 'Inter', '20-24px', 'Semibold', 'Subsections'],
+        ['Body Text', 'Inter', '16px', 'Regular', 'Paragraphs'],
+        ['Small Text', 'Inter', '14px', 'Regular', 'Captions, labels'],
+        ['Buttons', 'Inter', '16px', 'Medium', 'CTAs'],
+    ]
+
+    typo_table = Table(typo_data, colWidths=[1.2*inch, 1*inch, 0.8*inch, 1*inch, 2*inch])
+    typo_table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), BRAND_COLORS['primary']),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 10),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, BRAND_COLORS['light']]),
+    ]))
+    story.append(typo_table)
+    story.append(PageBreak())
+
+    # === LOGO USAGE ===
+    story.append(Paragraph("Logo Usage", heading_style))
+    story.append(Paragraph(
+        """The FlesvoedingCalculator logo is the cornerstone of our brand identity.
+        Always maintain proper spacing and never distort or alter the logo.""",
+        body_style
+    ))
+    story.append(Spacer(1, 0.3*inch))
+
+    # Logo variations (placeholder paths - replace with actual logo files)
+    logo_variations = {
+        'primary': 'logo_primary.png',  # Replace with actual paths
+        'white': 'logo_white.png',
+        'black': 'logo_black.png'
+    }
+    story.append(LogoDisplayFlowable(logo_variations))
+    story.append(Spacer(1, 0.3*inch))
+
+    # Logo guidelines
+    story.append(Paragraph("Logo Guidelines", subheading_style))
+    logo_guidelines = [
+        "• Maintain minimum clear space equal to the height of the 'F'",
+        "• Never rotate, skew, or distort the logo",
+        "• Use primary logo on light backgrounds",
+        "• Use white logo on dark backgrounds",
+        "• Minimum size: 120px width for digital, 30mm for print",
+        "• Never place logo on busy backgrounds",
+    ]
+    for guideline in logo_guidelines:
+        story.append(Paragraph(guideline, body_style))
+
+    story.append(PageBreak())
+
+    # === UI COMPONENTS ===
+    story.append(Paragraph("UI Components", heading_style))
+    story.append(Paragraph(
+        """Consistent UI components create a cohesive user experience. Follow these
+        specifications for buttons, forms, and interactive elements.""",
+        body_style
+    ))
+    story.append(Spacer(1, 0.3*inch))
+
+    # Button specifications table
+    button_data = [
+        ['Button Type', 'Background', 'Text Color', 'Border', 'Usage'],
+        ['Primary', 'Coral (#FF6B35)', 'White', 'None', 'Main actions'],
+        ['Secondary', 'Transparent', 'Blue (#004E89)', '2px Blue', 'Secondary actions'],
+        ['Tertiary', 'Light Gray', 'Charcoal', 'None', 'Subtle actions'],
+        ['Disabled', 'Light Gray', 'Gray', 'None', 'Inactive state'],
+    ]
+
+    button_table = Table(button_data, colWidths=[1.3*inch, 1.3*inch, 1.2*inch, 1*inch, 1.2*inch])
+    button_table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), BRAND_COLORS['dark']),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, -1), 9),
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.grey),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, BRAND_COLORS['light']]),
+    ]))
+    story.append(button_table)
+    story.append(Spacer(1, 0.5*inch))
+
+    # === MOCKUPS (if available) ===
+    story.append(Paragraph("Application Examples", heading_style))
+    story.append(Paragraph(
+        """See how brand guidelines are applied across different touchpoints.""",
+        body_style
+    ))
+    story.append(Spacer(1, 0.2*inch))
+
+    # Mockup examples (replace with actual mockup images)
+    story.append(MockupFlowable('mockup_desktop.png', 'Desktop Application'))
+    story.append(Spacer(1, 0.3*inch))
+    story.append(MockupFlowable('mockup_mobile.png', 'Mobile Application'))
+
+    story.append(PageBreak())
+
+    # === BRAND VOICE ===
+    story.append(Paragraph("Brand Voice", heading_style))
+    story.append(Paragraph(
+        """Our brand voice is warm, supportive, and authoritative. We speak as
+        knowledgeable partners to parents, offering guidance without judgment.""",
+        body_style
+    ))
+    story.append(Spacer(1, 0.2*inch))
+
+    voice_attributes = [
+        ("Warm & Supportive", "We understand parenting challenges and offer encouragement"),
+        ("Clear & Simple", "Complex information explained in accessible language"),
+        ("Evidence-Based", "Recommendations backed by science and research"),
+        ("Non-Judgmental", "Supporting all feeding choices without bias"),
+    ]
+
+    for attribute, description in voice_attributes:
+        story.append(Paragraph(f"<b>{attribute}:</b> {description}", body_style))
+        story.append(Spacer(1, 0.1*inch))
+
+    # === CONTACT & CREDITS ===
+    story.append(Spacer(1, 0.5*inch))
+    story.append(Paragraph("Contact", heading_style))
+    story.append(Paragraph(
+        """For questions about brand guidelines or to request design assets,
+        contact: brand@flesvoedingcalculator.nl""",
+        body_style
+    ))
+    story.append(Spacer(1, 0.3*inch))
+    story.append(Paragraph(
+        "<i>Brand Book Version 1.0 | Last Updated: November 2024</i>",
+        ParagraphStyle('Footer', parent=body_style, fontSize=9, textColor=colors.grey)
+    ))
+
+    # Build PDF
+    doc.build(story)
+    print(f"Brand book generated: {filename}")
+
+# Generate the brand book
+if __name__ == "__main__":
+    create_brandbook("FlesvoedingCalculator_Brandbook.pdf")
+```
+
+---
+
+### Known Issues & Recommended Improvements
+
+#### 1. **Spacing Inconsistencies**
+**Current Issue**: Spacer heights are hardcoded and inconsistent
+```python
+# ❌ Current approach
+story.append(Spacer(1, 0.3*inch))  # Different values throughout
+story.append(Spacer(1, 0.5*inch))
+story.append(Spacer(1, 2*inch))
+```
+
+**Recommended Fix**: Use a spacing system
+```python
+# ✅ Better approach
+SPACING = {
+    'xs': 0.1*inch,
+    'sm': 0.2*inch,
+    'md': 0.3*inch,
+    'lg': 0.5*inch,
+    'xl': 1*inch,
+    'xxl': 2*inch
+}
+
+story.append(Spacer(1, SPACING['md']))
+```
+
+#### 2. **Alignment Problems in Custom Flowables**
+**Current Issue**: Elements in `ColorPaletteFlowable` don't align perfectly
+- Text placement is manually calculated
+- No baseline grid
+- Inconsistent margins
+
+**Recommended Fix**:
+```python
+def draw(self):
+    c = self.canv
+    # Use consistent baseline
+    BASELINE = 15  # Consistent baseline for text
+    LABEL_OFFSET = 5  # Consistent offset
+
+    # Calculate centered positions
+    text_width = c.stringWidth(color_name, 'Helvetica-Bold', 10)
+    text_x = x_offset + (swatch_width - text_width) / 2  # Center text
+```
+
+#### 3. **Page Break Issues**
+**Current Issue**: Content sometimes breaks awkwardly across pages
+- No `keepTogether` used for related content
+- Tables can split mid-row
+
+**Recommended Fix**:
+```python
+from reportlab.platypus import KeepTogether
+
+# Keep related content together
+section_content = [
+    Paragraph("Color Usage", subheading_style),
+    color_table
+]
+story.append(KeepTogether(section_content))
+```
+
+#### 4. **Visual Balance**
+**Current Issue**:
+- Cover page feels empty (too much whitespace at top)
+- Some sections are cramped while others are sparse
+- No visual rhythm
+
+**Recommended Fix**:
+```python
+# Cover page improvements
+story.append(Spacer(1, 1.5*inch))  # Reduced from 2*inch
+# Add decorative element
+story.append(ColorPaletteFlowable(BRAND_COLORS, width=4*inch, height=0.5*inch))
+story.append(Spacer(1, 0.5*inch))
+```
+
+#### 5. **Error Handling for Missing Images**
+**Current Issue**: Generic placeholders without clear messaging
+
+**Recommended Fix**:
+```python
+def draw(self):
+    c = self.canv
+    try:
+        c.drawImage(self.image_path, ...)
+    except FileNotFoundError:
+        # Better placeholder
+        c.setFillColor(colors.HexColor('#F5F5F5'))
+        c.rect(0, 40, self.width, self.height - 60, fill=1, stroke=0)
+        c.setFillColor(colors.HexColor('#CCCCCC'))
+        c.setFont('Helvetica', 14)
+        c.drawCentredString(self.width / 2, self.height / 2 + 20, "Image Not Found")
+        c.setFont('Helvetica', 10)
+        c.drawCentredString(self.width / 2, self.height / 2, f"Expected: {self.image_path}")
+```
+
+#### 6. **Typography Hierarchy Issues**
+**Current Issue**: Font size jumps are too dramatic (36pt → 24pt → 16pt)
+
+**Recommended Fix**: Use a modular scale
+```python
+# Modular scale (1.5 ratio)
+BASE_SIZE = 11
+SCALE = 1.5
+
+title_style = ParagraphStyle(
+    'CustomTitle',
+    fontSize=BASE_SIZE * (SCALE ** 4),  # ~41pt
+    # ...
+)
+
+heading_style = ParagraphStyle(
+    'CustomHeading', fontSize=BASE_SIZE * (SCALE ** 3),  # ~27pt
+    # ...
+)
+```
+
+---
+
+### Production Best Practices
+
+1. **Test with Actual Content**: The spacing issues become obvious with real content
+2. **Use KeepTogether**: For sections that shouldn't break across pages
+3. **Modular Spacing System**: Define spacing constants at the top
+4. **Baseline Grid**: Align all text to a consistent baseline (e.g., 14pt)
+5. **Visual Proofing**: Always review generated PDF before delivery
+6. **Image Validation**: Check all image paths exist before building PDF
+7. **Page Templates**: Use `PageTemplate` for consistent headers/footers
+8. **Color Consistency**: Store all brand colors in one place (like `BRAND_COLORS` dict)
+
+---
+
 ## Your Role
 
 When helping with PDF design:
@@ -931,6 +1505,10 @@ Always prioritize:
 
 ---
 
-**Version**: 1.0
+**Version**: 1.1.0
 **Last Updated**: November 19, 2024
 **Focus**: Professional PDF design with brand color and styling application
+
+### Version History
+- v1.1.0 (2024-11-19): Added Real-World ReportLab example with known issues and improvement recommendations
+- v1.0.0 (2024-11-19): Initial release
